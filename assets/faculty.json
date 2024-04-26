@@ -1,0 +1,1514 @@
+[
+    {
+        "Name & Initial": "Professor Dr. Touhid Bhuiyan(DTB)",
+        "Designation": "Professor",
+        "Employee ID": "710001029",
+        "Cell": "01847140016",
+        "Email": "",
+        "Assigned Room Number": "205"
+    },
+    {
+        "Name & Initial": "Dr. Sheak Rashed Haider Noori (SRH)",
+        "Designation": "Professor & HEAD",
+        "Employee ID": "710001060",
+        "Cell": "01847140176",
+        "Email": "headcse@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "205"
+    },
+    {
+        "Name & Initial": "Dr. S.M Aminul Haque (SMAH)",
+        "Designation": "Professor & Associate Head",
+        "Employee ID": "710001054",
+        "Cell": "01847140129",
+        "Email": "aminul.cse@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "205"
+    },
+    {
+        "Name & Initial": "Professor Dr. Md. Ismail Jabiullah(MIJ)",
+        "Designation": "Professor",
+        "Employee ID": "710002260",
+        "Cell": "01819299960",
+        "Email": "drismail.cse@diu.edu.bd",
+        "Assigned Room Number": "501(AB-1)"
+    },
+    {
+        "Name & Initial": "Dr. Md. Fokhray Hossain (MFH)",
+        "Designation": "Professor & Dean",
+        "Employee ID": "710000367",
+        "Cell": "01713493250",
+        "Email": "drfokhray@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "711"
+    },
+    {
+        "Name & Initial": "Dr. Md. Zahid Hasan (ZH)",
+        "Designation": "Associate Professor",
+        "Employee ID": "710001622",
+        "Cell": "01672580748",
+        "Email": "zahid.cse@diu.edu.bd",
+        "Assigned Room Number": "209"
+    },
+    {
+        "Name & Initial": "Ms. Nazmun Nessa Moon (NNM)",
+        "Designation": "Associate Professor",
+        "Employee ID": "710000878",
+        "Cell": "01798145670",
+        "Email": "moon@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "308(B)"
+    },
+    {
+        "Name & Initial": "Dr. Fizar Ahmed (FZA)",
+        "Designation": "Associate Professor",
+        "Employee ID": "710002507",
+        "Cell": "01775695814",
+        "Email": "fizar.cse@diu.edu.bd",
+        "Assigned Room Number": "301"
+    },
+    {
+        "Name & Initial": "Mr. Narayan Ranjan Chakraborty (NRC)",
+        "Designation": "Associate Professor and Associate Head",
+        "Employee ID": "710000633",
+        "Cell": "01717379897",
+        "Email": "narayan@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "205"
+    },
+    {
+        "Name & Initial": "Naznin Sultana (NS)",
+        "Designation": "Associate Professor",
+        "Employee ID": "710001538",
+        "Cell": "01911540341",
+        "Email": "naznin.cse@diu.edu.bd",
+        "Assigned Room Number": "508"
+    },
+    {
+        "Name & Initial": "Dr. Md. Atiqur Rahman(ATR)",
+        "Designation": "Associate Professor",
+        "Employee ID": "710003033",
+        "Cell": "01618300545",
+        "Email": "atiqurrahman.cse@diu.edu.bd",
+        "Assigned Room Number": "737"
+    },
+    {
+        "Name & Initial": "Dr. Md. Taimur Ahad(MTA)",
+        "Designation": "Associate Professor",
+        "Employee ID": "710003034",
+        "Cell": "01701330009",
+        "Email": "taimurahad.cse@diu.edu.bd",
+        "Assigned Room Number": "738"
+    },
+    {
+        "Name & Initial": "Mr. Md. Sadekur Rahman (SR)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001051",
+        "Cell": "01676379698",
+        "Email": "sadekur.cse@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "735"
+    },
+    {
+        "Name & Initial": "Ms. Subhenur Latif(SL)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710000632",
+        "Cell": "01703600895",
+        "Email": "snlatif@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "309(B)"
+    },
+    {
+        "Name & Initial": "Mr. Arif Mahmud",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001675",
+        "Cell": "01687995727",
+        "Email": "arif.cse@diu.edu.bd",
+        "Assigned Room Number": "317"
+    },
+    {
+        "Name & Initial": "Fahad Faisal (FF)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001697",
+        "Cell": "01712937997",
+        "Email": "fahad.cse@diu.edu.bd",
+        "Assigned Room Number": "309"
+    },
+    {
+        "Name & Initial": "Mr. Abdus Sattar(AS)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710002096",
+        "Cell": "01818392800",
+        "Email": "abdus.cse@diu.edu.bd",
+        "Assigned Room Number": "212"
+    },
+    {
+        "Name & Initial": "Mr. Shah Md. Tanvir Siddiquee(SMTS)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001514",
+        "Cell": "01712560297",
+        "Email": "tanvir.cse@diu.edu.bd",
+        "Assigned Room Number": "507"
+    },
+    {
+        "Name & Initial": "Most. Hasna Hena (HH)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001450",
+        "Cell": "01719472885",
+        "Email": "hena.cse@diu.edu.bd",
+        "Assigned Room Number": "730"
+    },
+    {
+        "Name & Initial": "Dr. Moushumi Zaman Bonny(MZB)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001390",
+        "Cell": "01923703097",
+        "Email": "bonny.cse@diu.edu.bd",
+        "Assigned Room Number": "732"
+    },
+    {
+        "Name & Initial": "Mr. Fourcan Karim Mazumder (FKM)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710002693",
+        "Cell": "01738332159",
+        "Email": "fourcan.cse@diu.edu.bd",
+        "Assigned Room Number": "732"
+    },
+    {
+        "Name & Initial": "Raja Tariqul Hasan Tusher(THT)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001287",
+        "Cell": "01675193182",
+        "Email": "tusher.cse@diu.edu.bd",
+        "Assigned Room Number": "725"
+    },
+    {
+        "Name & Initial": "Md. Abbas Ali Khan(AAK)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001967",
+        "Cell": "01924196829",
+        "Email": "abbas.cse@diu.edu.bd",
+        "Assigned Room Number": "729"
+    },
+    {
+        "Name & Initial": "Ms. Samia Nawshin  (SN)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710000985",
+        "Cell": "01915638046",
+        "Email": "samia@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "718"
+    },
+    {
+        "Name & Initial": "Tania Khatun (TK)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001710",
+        "Cell": "01685069742",
+        "Email": "tania.cse@diu.edu.bd",
+        "Assigned Room Number": "506(A)"
+    },
+    {
+        "Name & Initial": "Md. Sazzadur Ahamed(SZ)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001170",
+        "Cell": "01625983595",
+        "Email": "sazzad.cse@diu.edu.bd",
+        "Assigned Room Number": "211"
+    },
+    {
+        "Name & Initial": "Mr. Saiful Islam(SI)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001288",
+        "Cell": "01989089279",
+        "Email": "saiful.cse@diu.edu.bd",
+        "Assigned Room Number": "310"
+    },
+    {
+        "Name & Initial": "Mr. Faisal Imran (FI)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710002833",
+        "Cell": "01917326076",
+        "Email": "faisalimran.cse@diu.edu.bd",
+        "Assigned Room Number": "316/11"
+    },
+    {
+        "Name & Initial": "Ms. Taslima Ferdous Shuva(TFS)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001783",
+        "Cell": "01817008852",
+        "Email": "shuva.cse@diu.edu.bd",
+        "Assigned Room Number": "316"
+    },
+    {
+        "Name & Initial": "Mr. Md. Ali Hossain (MAH)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710003036",
+        "Cell": "01913909055",
+        "Email": "alihossain.cse@diu.edu.bd",
+        "Assigned Room Number": "728"
+    },
+    {
+        "Name & Initial": "Amatul Bushra Akhi (ABA)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001668",
+        "Cell": "01676436075",
+        "Email": "akhi.cse@diu.edu.bd",
+        "Assigned Room Number": "737"
+    },
+    {
+        "Name & Initial": "Mr. Mohammad Monirul Islam(MMI)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710000519",
+        "Cell": "01811481649",
+        "Email": "monirul@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "733"
+    },
+    {
+        "Name & Initial": "Dewan Mamun Raza(DMR)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001896",
+        "Cell": "01730967205",
+        "Email": "dewan.cse@diu.edu.bd",
+        "Assigned Room Number": "317/12"
+    },
+    {
+        "Name & Initial": "Sharmin Akter(SNA)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002349",
+        "Cell": "01798625502",
+        "Email": "sharminakter.cse@diu.edu.bd",
+        "Assigned Room Number": "317/11"
+    },
+    {
+        "Name & Initial": "Fatema Tuj Johora (FTJ)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710001966",
+        "Cell": "01847165119",
+        "Email": "fatema.cse@diu.edu.bd",
+        "Assigned Room Number": "316/2"
+    },
+    {
+        "Name & Initial": "Md. Sabab Zulfiker (MSZ)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002342",
+        "Cell": "01716033198",
+        "Email": "sabab.cse@diu.edu.bd",
+        "Assigned Room Number": "316/7"
+    },
+    {
+        "Name & Initial": "Amit Chakraborty Chhoton (ACC)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710002348",
+        "Cell": "01718384336",
+        "Email": "amit.cse@diu.edu.bd",
+        "Assigned Room Number": "317/6"
+    },
+    {
+        "Name & Initial": "Mushfiqur Rahman (MUR)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002480",
+        "Cell": "01714218217",
+        "Email": "mushfiqur.cse@diu.edu.bd",
+        "Assigned Room Number": "316/9"
+    },
+    {
+        "Name & Initial": "Md Hafizul Imran (MHI)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002755",
+        "Cell": "01740064708",
+        "Email": "hafizulimran.cse@diu.edu.bd",
+        "Assigned Room Number": "Robotics Lab ,6th Floor"
+    },
+    {
+        "Name & Initial": "Ms. Shayla Sharmin (SS)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002116",
+        "Cell": "01787689999",
+        "Email": "shayla.cse@diu.edu.bd",
+        "Assigned Room Number": "316/12"
+    },
+    {
+        "Name & Initial": "Zerin Nasrin Tumpa(ZNT)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710001968",
+        "Cell": "01835531409",
+        "Email": "zerintumpa.cse@diu.edu.bd",
+        "Assigned Room Number": "718"
+    },
+    {
+        "Name & Initial": "Tapasy Rabeya(TRA)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002339",
+        "Cell": "01533134319",
+        "Email": "tapasyrabeya.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Mr. Mohammad Jahangir Alam(MJA)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710001970",
+        "Cell": "01741378269",
+        "Email": "jahangir.cse@diu.edu.bd",
+        "Assigned Room Number": "316/7"
+    },
+    {
+        "Name & Initial": "Ms. Aliza Ahmed Khan (AAK)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002476",
+        "Cell": "01715918474",
+        "Email": "aliza.cse@diu.edu.bd",
+        "Assigned Room Number": "317/13"
+    },
+    {
+        "Name & Initial": "Zakia Sultana Eshita (ZS)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002477",
+        "Cell": "01676304194",
+        "Email": "zakiasultana.cse@diu.edu.bd",
+        "Assigned Room Number": "317/9"
+    },
+    {
+        "Name & Initial": "Mr. Shahadat Hossain (SH)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710003037",
+        "Cell": "016214823181",
+        "Email": "shahadat.cse@diu.edu.bd",
+        "Assigned Room Number": "317"
+    },
+    {
+        "Name & Initial": "Ms. Refath Ara Hossain (RAH)",
+        "Designation": "Lecturer",
+        "Employee ID": "710001564",
+        "Cell": "01712147014",
+        "Email": "refath.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Md. Firoz Hasan(FH)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710001985",
+        "Cell": "01749278164",
+        "Email": "firoz.cse@diu.edu.bd",
+        "Assigned Room Number": "317/2"
+    },
+    {
+        "Name & Initial": "Mr. Md. Aynul Hasan Nahid(AHN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002090",
+        "Cell": "01674834062",
+        "Email": "aynul.cse@diu.edu.bd",
+        "Assigned Room Number": "317"
+    },
+    {
+        "Name & Initial": "Lamia Rukhsara(LR)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002103",
+        "Cell": "01819652162",
+        "Email": "lamia.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Nishat Sultana(NIS)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002097",
+        "Cell": "01707482208",
+        "Email": "nishat.cse@diu.edu.bd",
+        "Assigned Room Number": "505"
+    },
+    {
+        "Name & Initial": "Itisha Nowrin (IN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002100",
+        "Cell": "01769345188",
+        "Email": "itisha.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Israt Jahan(IJN)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002346",
+        "Cell": "01794362263",
+        "Email": "isratjahan.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Mr. Md. Zabirul Islam (MZI)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002624",
+        "Cell": "01521307471",
+        "Email": "zabirul.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Ms. Fabliha Haque (FHE)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002625",
+        "Cell": "01760021992",
+        "Email": "fabliha.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Ms. Johora Akter Polin (JAP)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002634",
+        "Cell": "01686206999",
+        "Email": "polin.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Mr. Nahid Hasan (NH)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002627",
+        "Cell": "01534561707",
+        "Email": "nahid.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Mr. Abu Kaisar Mohammad Masum (KMM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002636",
+        "Cell": "01676882085",
+        "Email": "abu.cse@diu.edu.bd",
+        "Assigned Room Number": "317"
+    },
+    {
+        "Name & Initial": "Ms. Sharun Akter Khushbu (SAK)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002645",
+        "Cell": "01730599307",
+        "Email": "sharun.cse@diu.edu.bd",
+        "Assigned Room Number": "317"
+    },
+    {
+        "Name & Initial": "Chowdhury Abida Anjum Era (CAA)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002646",
+        "Cell": "01767677265",
+        "Email": "chowdhury.cse@diu.edu.bd",
+        "Assigned Room Number": "705"
+    },
+    {
+        "Name & Initial": "Md. Ferdouse Ahmed Foysal (FAF)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002633",
+        "Cell": "01620857287",
+        "Email": "ferdouse.cse@diu.edu.bd",
+        "Assigned Room Number": "317/4"
+    },
+    {
+        "Name & Initial": "Mr. Krishno Dey (KD)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002757",
+        "Cell": "01786147796",
+        "Email": "krishno.cse@diu.edu.bd",
+        "Assigned Room Number": "316/5"
+    },
+    {
+        "Name & Initial": "Mr. Md. Mafiul Hasan Matin (MHM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002628",
+        "Cell": "01776055840",
+        "Email": "matin.cse@diu.edu.bd",
+        "Assigned Room Number": "316/12"
+    },
+    {
+        "Name & Initial": "Mr. Md Assaduzzaman (MA)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002642",
+        "Cell": "01824089009",
+        "Email": "assaduzzaman.cse@diu.edu.bd",
+        "Assigned Room Number": "316/1"
+    },
+    {
+        "Name & Initial": "Mr. Afjal Hossan Sarower (AHS)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002635",
+        "Cell": "01869045878",
+        "Email": "afjal.cse@diu.edu.bd",
+        "Assigned Room Number": "317/10"
+    },
+    {
+        "Name & Initial": "Mr. Amir Sohel (ARS)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002641",
+        "Cell": "01688752572",
+        "Email": "amir.cse@diu.edu.bd",
+        "Assigned Room Number": "317/1"
+    },
+    {
+        "Name & Initial": "Mr. Tanim Ahmed(TA)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002756",
+        "Cell": "01627891115",
+        "Email": "tanimahmed.cse@diu.edu.bd",
+        "Assigned Room Number": "316/7"
+    },
+    {
+        "Name & Initial": "Mr. Abdullah Al Mamun(AAM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002758",
+        "Cell": "01754481294",
+        "Email": "mamun.cse@diu.edu.bd",
+        "Assigned Room Number": "505/1"
+    },
+    {
+        "Name & Initial": "Mr. Partha Dip Sarkar(PDS)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002783",
+        "Cell": "01753798708",
+        "Email": "dip.cse@diu.edu.bd",
+        "Assigned Room Number": "505/17"
+    },
+    {
+        "Name & Initial": "Mr. Md. Moynul Hossain(MMH)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002784",
+        "Cell": "01732377803",
+        "Email": "moynul.cse@diu.edu.bd",
+        "Assigned Room Number": "505/10"
+    },
+    {
+        "Name & Initial": "Ms. Nushrat Jahan Ria(NJR)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002786",
+        "Cell": "01521201557",
+        "Email": "nushratria.cse@diu.edu.bd",
+        "Assigned Room Number": "505/8"
+    },
+    {
+        "Name & Initial": "Mr. Md. Mahedi Hassan(MHS)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002788",
+        "Cell": "01301728260",
+        "Email": "mhassan.cse@diu.edu.bd",
+        "Assigned Room Number": "505/16"
+    },
+    {
+        "Name & Initial": "Ms. Tasnim Tabassum(MTT)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002789",
+        "Cell": "01916484735",
+        "Email": "tasnimtabassum.cse@diu.edu.bd",
+        "Assigned Room Number": "505/7"
+    },
+    {
+        "Name & Initial": "Ms. Faria Nishat Khan(FNK)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002790",
+        "Cell": "01723444424",
+        "Email": "farianishat.cse@diu.edu.bd",
+        "Assigned Room Number": "505/13"
+    },
+    {
+        "Name & Initial": "Mr. Mahimul Islam Nadim(MIN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002791",
+        "Cell": "01776364728",
+        "Email": "nadim.cse@diu.edu.bd",
+        "Assigned Room Number": "505/4"
+    },
+    {
+        "Name & Initial": "Mr. Md Umaid Hasan(MUH)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002792",
+        "Cell": "01764390924",
+        "Email": "umaid.cse@diu.edu.bd",
+        "Assigned Room Number": "505/6"
+    },
+    {
+        "Name & Initial": "Mr. Mayen Uddin Mojumdar(MUM)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "710002793",
+        "Cell": "01402113506",
+        "Email": "mayen.cse@diu.edu.bd",
+        "Assigned Room Number": "316/11"
+    },
+    {
+        "Name & Initial": "Mr. Golam Rabbany(GR) ",
+        "Designation": "Lecturer",
+        "Employee ID": "710002794",
+        "Cell": "01919774996",
+        "Email": "rabbany.cse@diu.edu.bd",
+        "Assigned Room Number": "736"
+    },
+    {
+        "Name & Initial": "Ms. Zahura Zaman(ZZ)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002795",
+        "Cell": "01834496937",
+        "Email": "zahura.cse@diu.edu.bd",
+        "Assigned Room Number": "505/5"
+    },
+    {
+        "Name & Initial": "Mr. Md. Ashraful Islam Talukder(MAIT)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002831",
+        "Cell": "01680161225",
+        "Email": "ashrafulislam.cse@diu.edu.bd",
+        "Assigned Room Number": "505/11"
+    },
+    {
+        "Name & Initial": "Ms. Nasima Islam Bithi(NIB)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002796",
+        "Cell": "01629665310",
+        "Email": "bithi.cse@diu.edu.bd",
+        "Assigned Room Number": "505/12"
+    },
+    {
+        "Name & Initial": "Ms. Dristi Saha (DS)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003038",
+        "Cell": "01932836825",
+        "Email": "dristisaha.cse@diu.edu.bd",
+        "Assigned Room Number": "726"
+    },
+    {
+        "Name & Initial": "Ms. Zannatul Mawa Koli (ZMK)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003053",
+        "Cell": "01878045829",
+        "Email": "zannatulmawa.cse@diu.edu.bd",
+        "Assigned Room Number": "727"
+    },
+    {
+        "Name & Initial": "Mr. Tanvirul islam (TI)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003054",
+        "Cell": "01571321093",
+        "Email": "tanvirulislam.cse@diu.edu.bd",
+        "Assigned Room Number": "723"
+    },
+    {
+        "Name & Initial": "Mr. Md. Nahid Hasan (MNH)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003055",
+        "Cell": "01747089160",
+        "Email": "nahidhasan.cse@diu.edu.bd",
+        "Assigned Room Number": "317(Temporary)"
+    },
+    {
+        "Name & Initial": "Mr. Sultan Mahmud (SM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003056",
+        "Cell": "01843132099",
+        "Email": "sultanmahmud.cse@diu.edu.bd",
+        "Assigned Room Number": "317(Temporary)"
+    },
+    {
+        "Name & Initial": "Mr. Rahmatul Kabir Rasel Sarker (RKR)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003057",
+        "Cell": "01761918875",
+        "Email": "raselsarker.cse@diu.edu.bd",
+        "Assigned Room Number": "734"
+    },
+    {
+        "Name & Initial": "Ms. Nusrat Khan (NK)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003058",
+        "Cell": "01644461629",
+        "Email": "nusratkhan.cse@diu.edu.bd",
+        "Assigned Room Number": "730"
+    },
+    {
+        "Name & Initial": "Mr. Md Atik Asif Khan Akash (AAKA)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003059",
+        "Cell": "01772966496",
+        "Email": "akash.cse@diu.edu.bd",
+        "Assigned Room Number": "718"
+    },
+    {
+        "Name & Initial": "Mr. Md. Shakhawath Hossain (MSHN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003060",
+        "Cell": "01521502591",
+        "Email": "shakhawath.cse@diu.edu.bd",
+        "Assigned Room Number": "791"
+    },
+    {
+        "Name & Initial": "Mr. Md. Mubtasim Fuad (MMF)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003061",
+        "Cell": "01316100360",
+        "Email": "mubtasimfuad.cse@diu.edu.bd",
+        "Assigned Room Number": "505"
+    },
+    {
+        "Name & Initial": "Mohammad Asifur Rahim (MSRM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003062",
+        "Cell": "01621714558",
+        "Email": "asifurrahim.cse@diu.edu.bd",
+        "Assigned Room Number": "807 (C)"
+    },
+    {
+        "Name & Initial": "Mr. Md. Mizanur Rahman (MMRN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003063",
+        "Cell": "01954597608",
+        "Email": "mizanurrahman.cse@diu.edu.bd",
+        "Assigned Room Number": "807 (C)"
+    },
+    {
+        "Name & Initial": "Ms. Umme Ayman (UA)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003064",
+        "Cell": "01515267856",
+        "Email": "ummeayman.cse@diu.edu.bd",
+        "Assigned Room Number": "722"
+    },
+    {
+        "Name & Initial": "Mr. Md. Monarul Islam (MIS)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003101",
+        "Cell": "01796950211",
+        "Email": "monarul.cse@diu.edu.bd",
+        "Assigned Room Number": "807 (C)"
+    },
+    {
+        "Name & Initial": "CONTRACTUAL FACULTY",
+        "Designation": "",
+        "Employee ID": "",
+        "Cell": "",
+        "Email": "",
+        "Assigned Room Number": ""
+    },
+    {
+        "Name & Initial": "Professor Dr. Monzur Morshed(MMO)",
+        "Designation": "Professor, DU",
+        "Employee ID": "721500123",
+        "Cell": "01712046474",
+        "Email": "monjur.morshed@diu.edu.bd",
+        "Assigned Room Number": "214"
+    },
+    {
+        "Name & Initial": "Most. Sanjida Afrin (MSA)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01705894883",
+        "Email": "afrinasha217@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Hasanuzzaman Dipu(MHD)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "721500419",
+        "Cell": "01725568350",
+        "Email": "hasanuzzaman.cse0419.c@diu.edu.bd",
+        "Assigned Room Number": "202"
+    },
+    {
+        "Name & Initial": "Eng. Mosharraf Hossain Khan (MHK)",
+        "Designation": "Sr. Lecturer",
+        "Employee ID": "721500126",
+        "Cell": "01923240000",
+        "Email": "mosharraf.cse@diu.edu.bd",
+        "Assigned Room Number": "505"
+    },
+    {
+        "Name & Initial": "Sakib Mahmood Chowdhury (SMC)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500355",
+        "Cell": "01676233267",
+        "Email": "sakib.cse0355.c@diu.edu.bd",
+        "Assigned Room Number": "805"
+    },
+    {
+        "Name & Initial": "Sinthia Chowdhury(SC)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500415",
+        "Cell": "01921044122",
+        "Email": "sinthia.cse0415.c@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "K. M. Shahriar Islam(KMSI)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500397",
+        "Cell": "01521302319",
+        "Email": "shahriar.cse0397.c@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "Onamika Islam(OI)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500408",
+        "Cell": "01968256560",
+        "Email": "onamika.cse0417.c@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Nasrin Akter(NAA)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500417",
+        "Cell": "01984712858",
+        "Email": "nasrin.cse0417.c@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Farjana Akter(FA-C)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500412",
+        "Cell": "01630974206",
+        "Email": "farjana.cse0412.c@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Md. Arid Hasan (MAHN)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500325",
+        "Cell": "01521472918",
+        "Email": "arid.cse0325.c@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Takowa Rahman(TR)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500407",
+        "Cell": "01744245005",
+        "Email": "takowa.cse0407.c@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Md. Ibrahim Khan(IK)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500366",
+        "Cell": "01303082758",
+        "Email": "ibrahim.cse0366@diu.edu.bd",
+        "Assigned Room Number": "202"
+    },
+    {
+        "Name & Initial": "Abu Sufiun(ASN)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500414",
+        "Cell": "01878000675",
+        "Email": "sufiun.cse0414.c@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Md. Shovon(MDSH)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500420",
+        "Cell": "01768668915",
+        "Email": "shovon.cse0420.c@diu.edu.bd",
+        "Assigned Room Number": "7th floor"
+    },
+    {
+        "Name & Initial": "Md. Fahad Hossain (FHN)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500365",
+        "Cell": "01946704373",
+        "Email": "fahad.cse0365@diu.edu.bd",
+        "Assigned Room Number": "203(A)"
+    },
+    {
+        "Name & Initial": "Md. Hasan Imam Bijoy(MHIM)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500411",
+        "Cell": "01321655780",
+        "Email": "bijoy.cse0411.c@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "Mr. Md. Tazmim Hossain(TH)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500374",
+        "Cell": "01855998953",
+        "Email": "tazmim.taf@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Umme Habiba (UH)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500391",
+        "Cell": "01766178116",
+        "Email": "habiba.taf@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "Mr. Deawan Rakin Ahamed Remal(DRAR)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500379",
+        "Cell": "01878007916",
+        "Email": "remal.cse0379.c@diu.edu.bd",
+        "Assigned Room Number": "316/2"
+    },
+    {
+        "Name & Initial": "Munira Ferdous (MF)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500382",
+        "Cell": "01735147078",
+        "Email": "munira.taf@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "Hasnur Jahan(HJ)",
+        "Designation": "Lecturer",
+        "Employee ID": "",
+        "Cell": "01838638487",
+        "Email": "hasnurjahan1997@gmail.com",
+        "Assigned Room Number": "505/10"
+    },
+    {
+        "Name & Initial": "Md. Jakaria Zobair (MJZ)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500438",
+        "Cell": "01770730735",
+        "Email": "jakariacse16@gmail.com",
+        "Assigned Room Number": "505/3g"
+    },
+    {
+        "Name & Initial": "Shahriar Shakil (MSS)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500378",
+        "Cell": "01646329726",
+        "Email": "shahriar.taf@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "Lameya Islam(LLM)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500423",
+        "Cell": "01711006594",
+        "Email": "lameya35-2523@diu.edu.bd",
+        "Assigned Room Number": "505/8"
+    },
+    {
+        "Name & Initial": "Abu Shahed Shah Md Nazmul Arefin(ASNA)",
+        "Designation": "Lecturer",
+        "Employee ID": "",
+        "Cell": "01884306930",
+        "Email": "arefin15-12000@diu.edu.bd",
+        "Assigned Room Number": "Gym Building"
+    },
+    {
+        "Name & Initial": "Ms. Shirin Sultana(SS*)",
+        "Designation": "Lecturer(Senior Scale)",
+        "Employee ID": "710001040",
+        "Cell": "+8801914466996",
+        "Email": "shirin.ged@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "805(AB-4)"
+    },
+    {
+        "Name & Initial": "Ms Mahinur Akther(MA*)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002827",
+        "Cell": "+8801770787989",
+        "Email": "mahinurakther.eng@diu.edu.bd",
+        "Assigned Room Number": "01201(AB-4)"
+    },
+    {
+        "Name & Initial": "Mst. Sharmin Akter (SAR)",
+        "Designation": "Lecturer (Senior Scale)",
+        "Employee ID": "710002304",
+        "Cell": "01757593556",
+        "Email": "sharmin.ged@diu.edu.bd",
+        "Assigned Room Number": "805(AB-4)"
+    },
+    {
+        "Name & Initial": "Mr. Mohammad Abdul Halim(MAH*)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001439",
+        "Cell": "01770425705",
+        "Email": "halim.ged@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Mr. Abdullah Al Mamun(AAM*)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002758",
+        "Cell": "01754481294",
+        "Email": "mamun.cse@diu.edu.bd",
+        "Assigned Room Number": "505(AB-4)"
+    },
+    {
+        "Name & Initial": "Dr. Md.Samaun Hasan(MSH*)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001543",
+        "Cell": "01719258077",
+        "Email": "hasan.mct@diu.edu.bd",
+        "Assigned Room Number": "01007"
+    },
+    {
+        "Name & Initial": "Rokunuzzaman Biswas(RB)",
+        "Designation": "Lecturer",
+        "Employee ID": "724900041",
+        "Cell": "01303202554",
+        "Email": "rokunuzzaman.ds0041.c@diu.edu.bd",
+        "Assigned Room Number": "01201(A)"
+    },
+    {
+        "Name & Initial": "Shipra Mondal(SML)",
+        "Designation": "Senior Lecturer  ",
+        "Employee ID": "710000674",
+        "Cell": "01712479454",
+        "Email": "shipra@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Nisat Tasnim (NT)",
+        "Designation": "Senior Lecturer",
+        "Employee ID": "710002487",
+        "Cell": "01732980515",
+        "Email": "nishat.ged@diu.edu.bd",
+        "Assigned Room Number": "805(AB-4)"
+    },
+    {
+        "Name & Initial": "Tanzina Afroz Rimi(TAR) ",
+        "Designation": "Lecturer",
+        "Employee ID": "710002478",
+        "Cell": "+8801716405475",
+        "Email": "tanzinaafroz.cse@diu.edu.bd",
+        "Assigned Room Number": "316/10"
+    },
+    {
+        "Name & Initial": "Syeda Maria Rahman (SMR)",
+        "Designation": "Lecturer ",
+        "Employee ID": "Undefined",
+        "Cell": "+8801681641830",
+        "Email": "maria.bba@diu.edu.bd",
+        "Assigned Room Number": "KT-1308"
+    },
+    {
+        "Name & Initial": "Onamika Islam (OL)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01968256560",
+        "Email": "onamika.cse0417.c@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Mr. Rokunuzzaman Biswas(RKB)",
+        "Designation": "Lecturer",
+        "Employee ID": "750000198",
+        "Cell": "01303202554",
+        "Email": "rokunuzzaman.ged0198.c@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Zarin Anjuman Sejuti (ZAS)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01751646399",
+        "Email": "Undefined",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Dr. Arif Mahmud (AM)",
+        "Designation": "Associate Professor & Coordinator M.Sc",
+        "Employee ID": "710001675",
+        "Cell": "01687995727",
+        "Email": "arif.cse@diu.edu.bd",
+        "Assigned Room Number": "317"
+    },
+    {
+        "Name & Initial": "Dr. Syed Akhter Hossain (SAH)",
+        "Designation": "Professor & Dean",
+        "Employee ID": "710003214",
+        "Cell": "01817382645",
+        "Email": "aktarhossain@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "AB04-709"
+    },
+    {
+        "Name & Initial": "Mr. Omar Tawhid Imam (OTI)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003098",
+        "Cell": "01882540648",
+        "Email": "omartawhid.eee@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Ms. Lameya Islam (LI)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003235",
+        "Cell": "01711006594",
+        "Email": "lameya.cse@diu.edu.bd",
+        "Assigned Room Number": "AB04-807"
+    },
+    {
+        "Name & Initial": "Mr. Mustofa Ahmed (MAA)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003243",
+        "Cell": "01720823808",
+        "Email": "mustofa.cse@diu.edu.bd",
+        "Assigned Room Number": "KT-317/7"
+    },
+    {
+        "Name & Initial": "Mr. Mohammad Abdul Halim (ALH)",
+        "Designation": "Assistant Professor  in Mathematics",
+        "Employee ID": "710001439",
+        "Cell": "01770425705",
+        "Email": "halim.ged@diu.edu.bd",
+        "Assigned Room Number": "AB04-805"
+    },
+    {
+        "Name & Initial": "Mr. Nazmul Huda Azad (NHA)",
+        "Designation": "Undefined",
+        "Employee ID": "Undefined",
+        "Cell": "01585793728",
+        "Email": "Undefined",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Agnishwar Nath (AN)",
+        "Designation": "Lecturer ",
+        "Employee ID": "Undefined",
+        "Cell": "+8801403157510",
+        "Email": "Undefined",
+        "Assigned Room Number": "AB04-1308"
+    },
+    {
+        "Name & Initial": "Indrani Shen Toma (IST)",
+        "Designation": "Lecturer",
+        "Employee ID": "1773540000",
+        "Cell": "Undefined",
+        "Email": "tomasen30@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Noor Muhammad (NRM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003385",
+        "Cell": "01750-203529",
+        "Email": "noor.cse@diu.edu.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Md Shohidul Islam Polash (SIP)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500457",
+        "Cell": "01711281551",
+        "Email": "polash.cse@diu.edu.bd",
+        "Assigned Room Number": "316-6"
+    },
+    {
+        "Name & Initial": "Mr. Md. Masud Parvaj",
+        "Designation": "Lecturer",
+        "Employee ID": "710002327",
+        "Cell": "+8801913808126",
+        "Email": "masud.ged@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Maruf Chand (MMC)",
+        "Designation": "Lecturer ",
+        "Employee ID": "710003406",
+        "Cell": "01760008807",
+        "Email": "chand.cse0487.c@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Ms. Afsana Jerin Shayery (AJS)",
+        "Designation": "Lecturer ",
+        "Employee ID": "710003236",
+        "Cell": "01736373222",
+        "Email": "shayery.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Abdul Muntakin (ALM)",
+        "Designation": "Lecturer ",
+        "Employee ID": "710003221",
+        "Cell": "01703941730",
+        "Email": "muntakim.cse@diu.edu.bd",
+        "Assigned Room Number": "719"
+    },
+    {
+        "Name & Initial": "Mr. Md Jihan Parvaj (MJP)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01914865312",
+        "Email": "jihanparvaj.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Mr. Mahmudul Islam Rakib (MIR)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01781941877",
+        "Email": "rakibmahmud.inbox@gmail.com",
+        "Assigned Room Number": "316/4"
+    },
+    {
+        "Name & Initial": "Ms Shahrin Khan (SNK)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01782799769",
+        "Email": "shahrinkhan306@gmail.com",
+        "Assigned Room Number": "316/12"
+    },
+    {
+        "Name & Initial": "Dr. Md. Kamrul Hossain (MKH)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001306",
+        "Cell": "01711069636",
+        "Email": "kamrul.ged@diu.edu.bd",
+        "Assigned Room Number": "213(A) Scholars Home"
+    },
+    {
+        "Name & Initial": "Ms Sadia Jannat Mitu (SAJ)",
+        "Designation": "Lecturer ",
+        "Employee ID": "710003380",
+        "Cell": "01795582152",
+        "Email": "jannatmitu.cse@diu.edu.bd",
+        "Assigned Room Number": "807(A)"
+    },
+    {
+        "Name & Initial": "Mansura Akter Mome (MAM)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01559723321",
+        "Email": "mansuraakter-2016614686@amath.du.ac.bd",
+        "Assigned Room Number": "807"
+    },
+    {
+        "Name & Initial": "Ms Faiza Feroz (FFZ)",
+        "Designation": "Lecturer ",
+        "Employee ID": "710003402",
+        "Cell": "01611632683",
+        "Email": "faiza.cse@diu.edu.bd",
+        "Assigned Room Number": "807(B)"
+    },
+    {
+        "Name & Initial": "Mr. Istiaque Ahmed (IAD)",
+        "Designation": "Lecturer ",
+        "Employee ID": "710003341",
+        "Cell": "01770568870",
+        "Email": "istiaque.cse@diu.edu.bd",
+        "Assigned Room Number": "807(C)"
+    },
+    {
+        "Name & Initial": "Md. Rafidul Hasan Khan (RHK)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500401",
+        "Cell": "01766446862",
+        "Email": "rafidul.cse0401.c@diu.edu.bd",
+        "Assigned Room Number": "203(A)"
+    },
+    {
+        "Name & Initial": "Durjoy Bhowmik (DJB)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01761563906",
+        "Email": "durjoybhowmik1154@gmail.com",
+        "Assigned Room Number": "702(B)"
+    },
+    {
+        "Name & Initial": "Tasmim Sultana (TMS)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01889815762",
+        "Email": "tasmimsultana65736@gmail.com",
+        "Assigned Room Number": "702(B)"
+    },
+    {
+        "Name & Initial": "Sampa Saha (SAS)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01627553431",
+        "Email": "Sampa.ba@diu.edu.bd",
+        "Assigned Room Number": "1308(09)"
+    },
+    {
+        "Name & Initial": "Mr Mehadi Hasan(MHN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003379",
+        "Cell": "01521579271",
+        "Email": "mehedihasan.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md Sabbir Hossen Bijoy (SHB)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01729566429",
+        "Email": "sabbirbejoy423@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Asif Mahmud Ridoy (MAMR)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500484",
+        "Cell": "01796113567",
+        "Email": "ridoy.cse0484.c@diu.edu.bd",
+        "Assigned Room Number": "203 (A)"
+    },
+    {
+        "Name & Initial": "Gayatri Rani Sarker (GRS)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01957397305",
+        "Email": "gayatrisarkermathju@gmail.com",
+        "Assigned Room Number": "702(B)"
+    },
+    {
+        "Name & Initial": "Chayti Saha (CSA)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003444",
+        "Cell": "01533391908",
+        "Email": "chaytisaha98@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Roni Islam (RIM)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003413",
+        "Cell": "01781054348",
+        "Email": "roniislam.ru348@gmail.com",
+        "Assigned Room Number": "745"
+    },
+    {
+        "Name & Initial": "Md. Suzauddulah (SDH)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003434",
+        "Cell": "01779750177",
+        "Email": "suzauddulah.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Al-Mamun (AMN)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003429",
+        "Cell": "01789221262",
+        "Email": "almamun.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Tania Akter Asa (TAA)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500475",
+        "Cell": "01643490662",
+        "Email": "Asa.cse0475.c@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Asfaqur Rahman (MAR)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003410",
+        "Cell": "01950896177",
+        "Email": "asfaqur.cse.diu@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Abdullah Al Mahmud (AHAM)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01679719544",
+        "Email": "mahmud.cse0461.c@diu.edu.bd",
+        "Assigned Room Number": "203(B)"
+    },
+    {
+        "Name & Initial": "Atia Sanjida Talulder (AST)",
+        "Designation": "Lecturer",
+        "Employee ID": "710002365",
+        "Cell": "01750340091",
+        "Email": "atiasanjida.ged@diu.edu.bd",
+        "Assigned Room Number": "KT-805"
+    },
+    {
+        "Name & Initial": "Ms. Protima Dash (PD)",
+        "Designation": "Assistant Professor",
+        "Employee ID": "710001339",
+        "Cell": "01716788108",
+        "Email": "protima.ged@diu.edu.bd",
+        "Assigned Room Number": "KT-805"
+    },
+    {
+        "Name & Initial": "Afsana Begum (ABM)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500474",
+        "Cell": "01521425995",
+        "Email": "afsana.cse0478.c@diu.edu.bd",
+        "Assigned Room Number": "702(B)"
+    },
+    {
+        "Name & Initial": "Dr. Sk. Abdul Kader Arafin (AKA)",
+        "Designation": "Professor",
+        "Employee ID": "710000279",
+        "Cell": "01711979182",
+        "Email": "skak_arafin@daffodilvarsity.edu.bd",
+        "Assigned Room Number": "Scholar Building, Room:219"
+    },
+    {
+        "Name & Initial": "Mr. Md Mohammad Masum Bakaul (MB)",
+        "Designation": "Lecturer (Senior Scale)",
+        "Employee ID": "710003449",
+        "Cell": "01620705168",
+        "Email": "bakaul.cse@diu.edu.bd",
+        "Assigned Room Number": "316(3)"
+    },
+    {
+        "Name & Initial": "Md. Ashaf Uddaula (AUA)",
+        "Designation": "Lecturer",
+        "Employee ID": "Undefined",
+        "Cell": "01851968889",
+        "Email": "ashafuddaula.cse@diu.edu.bd",
+        "Assigned Room Number": "317(9)"
+    },
+    {
+        "Name & Initial": "Md. Rasedul Islam (RLI)",
+        "Designation": "Lecturer (Senior Scale)",
+        "Employee ID": "Undefined",
+        "Cell": "01746255511",
+        "Email": "rasedul.islam@oiate.ru",
+        "Assigned Room Number": "KT-202"
+    },
+    {
+        "Name & Initial": "Mr.Md. Obaidullah (MOB)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003426",
+        "Cell": "01726261746",
+        "Email": "obaidullah.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Mr. Anup Kumar Modak (AKM)",
+        "Designation": "Lecturer",
+        "Employee ID": "723300199",
+        "Cell": "01874066015",
+        "Email": "anup.eee0199.c@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Abdullah-Al-Kafi (AHAK)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003373",
+        "Cell": "'01776026693",
+        "Email": "kafi.cse@diu.edu.bd",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Mr. Aashraf Ullah Rahat (AUR)",
+        "Designation": "Lecturer",
+        "Employee ID": "710003378",
+        "Cell": "01521255946",
+        "Email": "asraf.cse@diu.edu.bd",
+        "Assigned Room Number": "KT-317"
+    },
+    {
+        "Name & Initial": "Avizit Nandi (ATN)",
+        "Designation": "Lecturer",
+        "Employee ID": "",
+        "Cell": "01721843743",
+        "Email": "nandi1709018@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Emad Hossain Likhon (EHL)",
+        "Designation": "Lecturer",
+        "Employee ID": "",
+        "Cell": "01747367808",
+        "Email": "emadhossainlikhon@gmail.com",
+        "Assigned Room Number": "Undefined"
+    },
+    {
+        "Name & Initial": "Md. Shamsuzzaman Miah (MSNM)",
+        "Designation": "Lecturer",
+        "Employee ID": "721500465",
+        "Cell": "01626610744",
+        "Email": "shamsuzzaman.cse0465.c@diu.edu.bd",
+        "Assigned Room Number": "Fab Lab"
+    },
+    {
+        "Name & Initial": "Tasmima Akter (TMA)",
+        "Designation": "Lecturer",
+        "Employee ID": "",
+        "Cell": "01873703050",
+        "Email": "uta5.cse@diu.edu.bd",
+        "Assigned Room Number": "KT-210"
+    }
+]
