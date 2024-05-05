@@ -72,13 +72,21 @@ function AdminLayout({ children }) {
                         borderRadius:10,
                         marginRight:15,
                     }}
-                    children={<div className='flex jy_sb' style={{ height: "100%" }}>
-                        <div></div>
-                        <div className='flex an_center' >
-                            <LogoutOutlined style={{ fontSize: "24px", marginRight: "20px" }} onClick={() => {
-                                clearToken();
-                                navigate("/");
-                            }} className='cursor' />  </div>                  </div>}
+                    children={
+                        <div className='flex jy_sb' style={{ height: "100%" }}>
+                            <div></div>
+                            <div className='flex an_center' >
+                                <LogoutOutlined 
+                                style={{ fontSize: "24px", marginRight: "20px" }} 
+                                onClick={() => {
+                                    clearToken();
+                                    navigate("/");
+                                }}
+                                className='cursor' 
+                                />
+                            </div>
+                        </div>
+                    }
 
                 />
 
