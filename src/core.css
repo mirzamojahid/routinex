@@ -198,7 +198,6 @@
 
 
 .slde_logo {
-    background-color: blue;
     font-size: 16px;
     height: 100%;
     display: flex;
@@ -208,4 +207,17 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 5px;
+}
+.custom-menu .ant-menu-item{
+    padding: 25px;
+}
+
+.custom-menu .ant-menu-item-selected{
+    background-color: #49a3f1;
+}
+
+.custom-menu .ant-menu-item:not(.ant-menu-item-selected):hover{
+    background-color: rgba(240, 240, 240, 0.3) !important;
 }

@@ -29,34 +29,48 @@ function AdminLayout({ children }) {
             <Sider
                 style={{
                     overflow: 'auto',
-                    height: '100vh',
+                    height: '95vh',
                     position: 'fixed',
-                    left: 0,
-                    top: 0,
+                    left: 15,
+                    top: 15,
                     bottom: 0,
-                    backgroundColor: "white"
+                    backgroundColor: "rgba(0, 0, 0, 0.87)",
+                    borderRadius: 10,
                 }}
             >
 
-                <div style={{ height: "65px" }} >
+                <div style={{ height: "80px",  marginBottom:20}} >
                     <div class='slde_logo' onClick={() => {
                         navigate("/admin/");
-                    }} width={110} height={35} >Routinex</div>
+                    }}>Class Routine Builder</div>
                 </div>
 
-                <Menu onClick={onClick}
-                    mode="inline" defaultSelectedKeys={['/admin/routine']} items={sideItems} />
+                <Menu 
+                    onClick={onClick}
+                    className="custom-menu"
+                    style={{ 
+                        backgroundColor: 'transparent',
+                        paddingLeft: 12,
+                        paddingRight:12,
+                    }}
+                    mode="inline" defaultSelectedKeys={['/admin/routine']} items={sideItems}
+                />
             </Sider>
 
             <Layout
                 style={{
-                    marginLeft: 200,
+                    marginLeft: 280,
+                    marginRight: 30,
+                    marginTop:20,
                 }}
             >
                 <Header
                     style={{
                         padding: 0,
-                        background: colorBgContainer,
+                        background: 'white',
+                        marginLeft: 15,
+                        borderRadius:10,
+                        marginRight:15,
                     }}
                     children={<div className='flex jy_sb' style={{ height: "100%" }}>
                         <div></div>
