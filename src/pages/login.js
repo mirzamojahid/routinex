@@ -27,7 +27,7 @@ function login() {
         type: 'loading',
         content: 'Loading...',
       });
-      const res = await fetch(base_endpoint + "/auth0/login/", {
+      const res = await fetch(base_endpoint + "/api/account/signin/", {
         method: "POST",
         headers: {
           "Accept": "*/*",
@@ -37,13 +37,13 @@ function login() {
           email: email,
           password: password
         })
-      })
 
+      })
       const datax = await res.json();
-      if (res.status === 200 && (datax["token"] !== undefined && datax["token"] !== null && datax["token"] !== "")) {
-        const bool = setToken(datax["token"]);
-        const tokenx = CheckToken();
-        if (bool === true && tokenx === datax["token"]) {
+      if (res.status === 200 && (datax["token"] !== undefined) && datax["token"] !== null) {
+        const bool = setToken(datax["token"]['access']);
+        navigate("/admin");
+        if (bool === true && CheckToken() === datax["token"]) {
           navigate("/admin");
         }
 
@@ -117,7 +117,7 @@ function login() {
         </div>
 
       </div>
-   
+
     </>
   )
 }

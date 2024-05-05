@@ -7,7 +7,7 @@ function NotFound() {
     const navigate = useNavigate()
 
     return (
-        <div className='body'>
+        <div>
             <Result
                 status="404"
                 title="404"

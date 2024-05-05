@@ -414,7 +414,7 @@ function Genrate() {
     return (
 
 
-        <div className='body'>
+        <div >
 
 
             <div id='generate_container' className='flex jy_sb'>

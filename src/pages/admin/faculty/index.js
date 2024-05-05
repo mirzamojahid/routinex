@@ -1,8 +1,11 @@
 import React from 'react'
+import Tablex from '../../../components/Tablex'
 
 function Faculty() {
   return (
-    <div>Faculty</div>
+    <div>
+      <Tablex></Tablex>
+    </div>
   )
 }
 

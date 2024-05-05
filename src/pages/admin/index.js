@@ -5,7 +5,7 @@ function Admin() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        navigate('/admin/assigned')
+        navigate('/admin/routine')
     }, [navigate])
 
 }
