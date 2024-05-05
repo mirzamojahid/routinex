@@ -8,7 +8,11 @@ const { Header, Content,
 
 
 const sideItems = [
-    { "label": "Routine", "key": "/admin/routine" }, { "label": "Course Offer", "key": "/admin/course" }, { "label": "Faculty", "key": "/admin/faculty" }, { "label": "Room Assigned", "key": "/admin/room" }, { "label": "Generate", "key": "/admin/generate" }
+    { "label": "Routine", "key": "/admin/routine" }, 
+    { "label": "Course Offer", "key": "/admin/course" }, 
+    { "label": "Faculty", "key": "/admin/faculty" }, 
+    { "label": "Room Assigned", "key": "/admin/room" }, 
+    { "label": "Generate", "key": "/admin/generate" }
 ]
 
 function AdminLayout({ children }) {
