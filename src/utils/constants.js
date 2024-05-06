@@ -16,6 +16,8 @@ export const semesterx = [{ value: "Spring 2025" }, { value: "Fall 2024" }, { va
 
 export const termx = [{ value: "1st Year(1st Term)" }, { value: "1st Year(2nd Term)" }, { value: "2nd Year(1st Term)" }, { value: "2nd Year(2nd Term)" }, { value: "3rd Year(1st Term)" }, { value: "3rd Year(2nd Term)" }, { value: "4th Year(1st Term)" }, { value: "4th Year(2nd Term)" }, { value: "Univeral Retake" }];
 
+export const departmentx = [{ value: "CSE" }, { value: "EEE" }, { value: "NFE" }, { value: "CVIL" }, { value: "ENGLISH" }, { value: "BBA" }, { value: "LAW" }, { value: "PHARMACY" }];
+
 
 export const batchx = [
     "56_A",
