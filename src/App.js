@@ -1,11 +1,11 @@
-import './App.css';
+import './styles/App.css';
 import store from './appstate/store'
 import { RequireToken } from './utils/auth';
-import Navbar from './components/Navbar';
-import Student from './pages/student';
-import Teacher from './pages/teacher';
-import Room from './pages/room';
-import EmptyRoom from './pages/empty-room';
+// import Navbar from './components/Navbar';
+// import Student from './pages/student';
+// import Teacher from './pages/teacher';
+// import Room from './pages/room';
+// import EmptyRoom from './pages/empty-room';
 import Login from './pages/login';
 import NotFound from './pages/404';
 import Home from './pages/admin/home';

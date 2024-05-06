@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, theme } from 'antd';
+import { Layout, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { LogoutOutlined } from '@ant-design/icons'
 import { clearToken } from '../utils/auth'
@@ -20,11 +20,7 @@ function AdminLayout({ children }) {
 
     const navigate = useNavigate();
 
-    const {
-        token: { colorBgContainer },
-    } = theme.useToken();
-
-
+  
     const onClick = (e) => {
         navigate(e.key)
     };
