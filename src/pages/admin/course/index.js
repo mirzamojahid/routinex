@@ -1,11 +1,10 @@
 import React from 'react'
+import Tablex from '../../../components/Tablex'
 
 function Course() {
   return (
-    <div>Course
-
-
-      
+    <div>
+      <Tablex></Tablex>
     </div>
   )
 }

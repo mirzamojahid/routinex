@@ -10,4 +10,4 @@ export const aregex = /^\/admin\/.*$/;
 
 export const navItem = [{ "name": "Student", "route": "/" }, { "name": "Teacher", "route": "/teacher" }, { "name": "Room", "route": "/room" }, { "name": "Empty Room", "route": "/empty" }];
 
-export const navItemAdmin = [{ "name": "Assigned", "route": "/admin/assigned" }, { "name": "Course Offer", "route": "/admin/course" }, { "name": "Faculty", "route": "/admin/faculty" }, { "name": "Room Assigned", "route": "/admin/room" }, { "name": "Generate", "route": "/admin/generate" }];
+export const navItemAdmin = [{ "label": "Routine", "key": "/admin/routine" }, { "label": "Course Offer", "key": "/admin/course" }, { "label": "Section", "key": "/admin/section" }, { "label": "Faculty", "key": "/admin/faculty" }, { "label": "Room Assigned", "key": "/admin/room" }, { "label": "Generate", "key": "/admin/generate" }];

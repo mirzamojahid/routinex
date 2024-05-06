@@ -1,5 +1,6 @@
 import React from 'react'
 import './generate.css'
+import FacultyListSearch from '../../components/FacultyListSearch';
 
 function Genrate() {
 
@@ -416,7 +417,9 @@ function Genrate() {
 
         <div >
 
+            <FacultyListSearch></FacultyListSearch>
 
+{/* 
             <div id='generate_container' className='flex jy_sb'>
 
                 <div className='generate-item'>
@@ -453,7 +456,7 @@ function Genrate() {
 
             </div>
 
-
+ */}
 
 
         </div>
