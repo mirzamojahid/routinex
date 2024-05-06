@@ -207,6 +207,8 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 5px
 }
 
 .custom-menu .ant-menu-item {
