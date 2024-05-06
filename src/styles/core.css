@@ -1,0 +1,247 @@
+.flex {
+    display: flex;
+}
+
+.jy_sb {
+    justify-content: space-between;
+}
+
+.jy_center {
+    justify-content: center;
+}
+
+.an_center {
+    align-items: center;
+}
+
+.ta_center {
+    text-align: center;
+}
+
+.mar5 {
+    margin: 5px;
+}
+
+.mar_l5 {
+    margin-left: 5px;
+}
+
+.mar_r5 {
+    margin-right: 5px;
+}
+
+.mar8 {
+    margin: 8px;
+}
+
+.mar10 {
+    margin: 10px;
+}
+
+.mar15 {
+    margin: 15px;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.pad8 {
+    padding: 5px;
+}
+
+.pad10 {
+    padding: 5px;
+}
+
+.pad15 {
+    padding: 5px;
+}
+
+.space5 {
+    margin-bottom: 5px;
+}
+
+.space10 {
+    margin-bottom: 10px;
+}
+
+.space15 {
+    margin-bottom: 15px;
+}
+
+.space20 {
+    margin-bottom: 20px;
+}
+
+.max1 {
+    max-lines: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.div_with_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.input {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.login_action_btn {
+    margin: 0 !important;
+    border: none;
+    border-radius: 5px !important;
+    width: 100% !important;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #fff;
+    height: 40px;
+}
+
+.grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gridP {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+#footer {
+    padding-top: 60px;
+    color: #fff;
+}
+
+
+
+.custom-checkbox .ant-checkbox-inner {
+    border: 1px solid #d9d9d9;
+    /* Set default border color */
+    border-radius: 4px;
+    display: none;
+
+    /* Add border-radius for rounded corners */
+}
+
+.custom-checkbox .ant-checkbox-inner::after {
+    display: none;
+}
+
+.custom-checkbox .ant-checkbox-checked .ant-checkbox-checked span {
+    border: 3px solid blue;
+    padding: 5px;
+    /* Optional: Add padding for better appearance */
+
+}
+
+/* Style for unchecked checkbox */
+.ant-checkbox-wrapper .ant-checkbox-checked span {
+    border: 3px solid grey;
+    padding: 5px;
+    /* Optional: Add padding for better appearance */
+}
+
+/* Style for checked checkbox */
+
+.left {
+    text-align: left;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.image {
+    width: 100%;
+    height: 210px;
+}
+
+
+.slde_logo {
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.custom-menu .ant-menu-item {
+    padding: 25px;
+}
+
+.custom-menu .ant-menu-item-selected {
+    background-color: #49a3f1;
+}
+
+.custom-menu .ant-menu-item:not(.ant-menu-item-selected):hover {
+    background-color: rgba(240, 240, 240, 0.3) !important;
+}
+
+.ant-menu-title-content {
+    color: white;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.table td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.termx {
+    background-color: #494949;
+    color: whitesmoke;
+}
+
+.width{
+    width: 100%;
+}
