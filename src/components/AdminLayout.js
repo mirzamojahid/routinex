@@ -1,7 +1,7 @@
 import React from 'react'
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Avatar } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { LogoutOutlined } from '@ant-design/icons'
+import { LogoutOutlined, UserOutlined } from '@ant-design/icons'
 import { clearToken } from '../utils/auth'
 import { navItemAdmin } from '../utils/constants';
 const { Header, Content,
@@ -29,6 +29,7 @@ function AdminLayout({ children }) {
                     backgroundColor: "rgba(0, 0, 0, 0.87)",
                     borderRadius: 10,
                 }}
+                width={260}
             >
 
                 <div style={{ height: "80px", marginBottom: 20 }} >
@@ -68,8 +69,18 @@ function AdminLayout({ children }) {
                         <div className='flex jy_sb' style={{ height: "100%" }}>
                             <div></div>
                             <div className='flex an_center' >
-                                <LogoutOutlined
-                                    style={{ fontSize: "24px", marginRight: "20px" }}
+                                <Avatar
+                                    style={{
+                                        marginRight:10
+                                    }}
+                                    icon={<UserOutlined />}
+                                />
+                                <Avatar
+                                    style={{
+                                        backgroundColor: '#ffc6c6',
+                                        marginRight:15
+                                    }}
+                                    icon={<LogoutOutlined/>}
                                     onClick={() => {
                                         clearToken();
                                         navigate("/");

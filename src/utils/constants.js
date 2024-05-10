@@ -10,7 +10,14 @@ export const aregex = /^\/admin\/.*$/;
 
 export const navItem = [{ "name": "Student", "route": "/" }, { "name": "Teacher", "route": "/teacher" }, { "name": "Room", "route": "/room" }, { "name": "Empty Room", "route": "/empty" }];
 
-export const navItemAdmin = [{ "label": "Routine", "key": "/admin/routine" }, { "label": "Course Offer", "key": "/admin/course" }, { "label": "Section", "key": "/admin/section" }, { "label": "Faculty", "key": "/admin/faculty" }, { "label": "Room Assigned", "key": "/admin/room" }, { "label": "Generate", "key": "/admin/generate" }];
+export const navItemAdmin = [
+    { "label": "Routine", "key": "/admin/routine" }, 
+    { "label": "Course Offer", "key": "/admin/course" }, 
+    { "label": "Section", "key": "/admin/section" }, 
+    { "label": "Faculty", "key": "/admin/faculty" }, 
+    { "label": "Rooms", "key": "/admin/room" }, 
+    { "label": "Generate", "key": "/admin/generate" }
+];
 
 export const semesterx = [{ value: "Spring 2025" }, { value: "Fall 2024" }, { value: "Spring 2024" }, { value: "Fall 2023" }, { value: "Spring 2023" }];
 
