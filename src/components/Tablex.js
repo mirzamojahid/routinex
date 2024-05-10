@@ -6,140 +6,140 @@ import Highlighter from 'react-highlight-words';
 
 const data = [];
 for (let i = 0; i < 46; i++) {
-    data.push({
-        key: i,
-        name: <div className='flex an_center'>
-            <img src={fahad} width={32} height={32} className='round'></img>
-            <span className='mar_l5 ta_center'> {`Fahan Hossain ${i}`}</span>
-        </div>,
-        gender: "Male",
-        desination: `Lecturer`,
-        action: <Button>View</Button>
-    });
+  data.push({
+    key: i,
+    name: <div className='flex an_center'>
+      <img alt='' src={fahad} width={32} height={32} className='round'></img>
+      <span className='mar_l5 ta_center'> {`Fahan Hossain ${i}`}</span>
+    </div>,
+    gender: "Male",
+    desination: `Lecturer`,
+    action: <Button>View</Button>
+  });
 }
 
 function Tablex() {
 
-    const [searchText, setSearchText] = useState('');
-    const [searchedColumn, setSearchedColumn] = useState('');
-    const searchInput = useRef(null);
+  const [searchText, setSearchText] = useState('');
+  const [searchedColumn, setSearchedColumn] = useState('');
+  const searchInput = useRef(null);
 
-    const handleSearch = (selectedKeys, confirm, dataIndex) => {
+  const handleSearch = (selectedKeys, confirm, dataIndex) => {
 
-        console.log(selectedKeys);
-      confirm();
-      setSearchText(selectedKeys[0]);
-      setSearchedColumn(dataIndex);
-    };
+    console.log(selectedKeys);
+    confirm();
+    setSearchText(selectedKeys[0]);
+    setSearchedColumn(dataIndex);
+  };
 
-    const handleReset = (clearFilters) => {
-      clearFilters();
-      setSearchText('');
-    };
+  const handleReset = (clearFilters) => {
+    clearFilters();
+    setSearchText('');
+  };
 
 
-    const getColumnSearchProps = (dataIndex) => ({
-      filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
-        <div
+  const getColumnSearchProps = (dataIndex) => ({
+    filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
+      <div
+        style={{
+          padding: 8,
+        }}
+        onKeyDown={(e) => e.stopPropagation()}
+      >
+        <Input
+          ref={searchInput}
+          placeholder={`Search ${dataIndex}`}
+          value={selectedKeys[0]}
+          onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+          onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
           style={{
-            padding: 8,
-          }}
-          onKeyDown={(e) => e.stopPropagation()}
-        >
-          <Input
-            ref={searchInput}
-            placeholder={`Search ${dataIndex}`}
-            value={selectedKeys[0]}
-            onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-            onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-            style={{
-              marginBottom: 8,
-              display: 'block',
-            }}
-          />
-          <Space>
-            <Button
-              type="primary"
-              onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-              icon={<SearchOutlined />}
-              size="small"
-              style={{
-                width: 120,
-              }}
-            >
-              Search
-            </Button>
-            <Button
-              onClick={() => clearFilters && handleReset(clearFilters)}
-              size="small"
-              style={{
-                width: 120,
-              }}
-            >
-              Reset
-            </Button>
-
-          </Space>
-        </div>
-      ),
-      filterIcon: (filtered) => (
-        <SearchOutlined
-          style={{
-            color: filtered ? '#1677ff' : undefined,
+            marginBottom: 8,
+            display: 'block',
           }}
         />
-      ),
-      onFilter: (value, record) =>
-        record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
-      onFilterDropdownOpenChange: (visible) => {
-        if (visible) {
-          setTimeout(() => searchInput.current?.select(), 100);
-        }
-      },
-      render: (text) =>
-        searchedColumn === dataIndex ? (
-          <Highlighter
-            highlightStyle={{
-              backgroundColor: '#ffc069',
-              padding: 0,
+        <Space>
+          <Button
+            type="primary"
+            onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
+            icon={<SearchOutlined />}
+            size="small"
+            style={{
+              width: 120,
             }}
-            searchWords={[searchText]}
-            autoEscape
-            textToHighlight={text ? text.toString() : ''}
-          />
-        ) : (
-          text
-        ),
-    });
+          >
+            Search
+          </Button>
+          <Button
+            onClick={() => clearFilters && handleReset(clearFilters)}
+            size="small"
+            style={{
+              width: 120,
+            }}
+          >
+            Reset
+          </Button>
 
-    const columns = [
-        {
-            title: 'Name',
-            dataIndex: 'name',
-            ...getColumnSearchProps('name'),
+        </Space>
+      </div>
+    ),
+    filterIcon: (filtered) => (
+      <SearchOutlined
+        style={{
+          color: filtered ? '#1677ff' : undefined,
+        }}
+      />
+    ),
+    onFilter: (value, record) =>
+      record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+    onFilterDropdownOpenChange: (visible) => {
+      if (visible) {
+        setTimeout(() => searchInput.current?.select(), 100);
+      }
+    },
+    render: (text) =>
+      searchedColumn === dataIndex ? (
+        <Highlighter
+          highlightStyle={{
+            backgroundColor: '#ffc069',
+            padding: 0,
+          }}
+          searchWords={[searchText]}
+          autoEscape
+          textToHighlight={text ? text.toString() : ''}
+        />
+      ) : (
+        text
+      ),
+  });
 
-        },
-        {
-            title: 'Gender',
-            dataIndex: 'gender',
-        },
-        {
-            title: 'Desination',
-            dataIndex: 'desination',
-        },
-        {
-            title: 'Action',
-            dataIndex: 'action'
-        },
-    ];
+  const columns = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      ...getColumnSearchProps('name'),
+
+    },
+    {
+      title: 'Gender',
+      dataIndex: 'gender',
+    },
+    {
+      title: 'Desination',
+      dataIndex: 'desination',
+    },
+    {
+      title: 'Action',
+      dataIndex: 'action'
+    },
+  ];
 
 
 
-    return (
-        <div>
-            <Table columns={columns} dataSource={data} />
-        </div>
-    )
+  return (
+    <div>
+      <Table columns={columns} dataSource={data} />
+    </div>
+  )
 }
 
 export default Tablex

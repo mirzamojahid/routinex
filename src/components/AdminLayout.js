@@ -1,33 +1,21 @@
 import React from 'react'
-import { Layout, Menu, theme } from 'antd';
+import { Layout, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { LogoutOutlined } from '@ant-design/icons'
 import { clearToken } from '../utils/auth'
+import { navItemAdmin } from '../utils/constants';
 const { Header, Content,
     Sider } = Layout;
 
 
-const sideItems = [
-    { "label": "Routine", "key": "/admin/routine" }, 
-    { "label": "Course Offer", "key": "/admin/course" }, 
-    { "label": "Faculty", "key": "/admin/faculty" }, 
-    { "label": "Room Assigned", "key": "/admin/room" }, 
-    { "label": "Generate", "key": "/admin/generate" }
-]
-
 function AdminLayout({ children }) {
 
-
     const navigate = useNavigate();
-
-    const {
-        token: { colorBgContainer },
-    } = theme.useToken();
-
-
     const onClick = (e) => {
         navigate(e.key)
     };
+
+
     return (
         <Layout hasSider>
             <Sider
@@ -43,21 +31,21 @@ function AdminLayout({ children }) {
                 }}
             >
 
-                <div style={{ height: "80px",  marginBottom:20}} >
+                <div style={{ height: "80px", marginBottom: 20 }} >
                     <div class='slde_logo' onClick={() => {
                         navigate("/admin/");
                     }}>Class Routine Builder</div>
                 </div>
 
-                <Menu 
+                <Menu
                     onClick={onClick}
                     className="custom-menu"
-                    style={{ 
+                    style={{
                         backgroundColor: 'transparent',
                         paddingLeft: 12,
-                        paddingRight:12,
+                        paddingRight: 12,
                     }}
-                    mode="inline" defaultSelectedKeys={['/admin/routine']} items={sideItems}
+                    mode="inline" defaultSelectedKeys={['/admin/routine']} items={navItemAdmin}
                 />
             </Sider>
 
@@ -65,7 +53,7 @@ function AdminLayout({ children }) {
                 style={{
                     marginLeft: 280,
                     marginRight: 30,
-                    marginTop:20,
+                    marginTop: 20,
                 }}
             >
                 <Header
@@ -73,20 +61,20 @@ function AdminLayout({ children }) {
                         padding: 0,
                         background: 'white',
                         marginLeft: 15,
-                        borderRadius:10,
-                        marginRight:15,
+                        borderRadius: 10,
+                        marginRight: 15,
                     }}
                     children={
                         <div className='flex jy_sb' style={{ height: "100%" }}>
                             <div></div>
                             <div className='flex an_center' >
-                                <LogoutOutlined 
-                                style={{ fontSize: "24px", marginRight: "20px" }} 
-                                onClick={() => {
-                                    clearToken();
-                                    navigate("/");
-                                }}
-                                className='cursor' 
+                                <LogoutOutlined
+                                    style={{ fontSize: "24px", marginRight: "20px" }}
+                                    onClick={() => {
+                                        clearToken();
+                                        navigate("/");
+                                    }}
+                                    className='cursor'
                                 />
                             </div>
                         </div>
@@ -102,7 +90,6 @@ function AdminLayout({ children }) {
                 >
                     {children}
                 </Content>
-
             </Layout>
         </Layout>
     )
