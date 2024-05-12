@@ -10,6 +10,7 @@ import Login from './pages/login';
 import NotFound from './pages/404';
 import Home from './pages/admin/home';
 import Profile from './pages/admin/profile';
+import AdminStaff from './pages/admin/admin_staff';
 import Admin from './pages/admin/index';
 import Generate from './pages/admin/generate';
 import Section from './pages/admin/section/index';
@@ -50,6 +51,7 @@ function App() {
           <Route path="/admin/room" element={<RequireToken><AdminLayout><AssignedRoom></AssignedRoom></AdminLayout></RequireToken>} />
           <Route path="/admin/profile" element={<RequireToken><AdminLayout><Profile></Profile></AdminLayout></RequireToken>} />
 
+          <Route path="/admin/list" element={<RequireToken><AdminLayout><AdminStaff></AdminStaff></AdminLayout></RequireToken>} />
           <Route path="/admin/section" element={<RequireToken><AdminLayout><Section></Section></AdminLayout></RequireToken>} />
 
           <Route path="/admin/section/details" element={<RequireToken><SectionDetails></SectionDetails></RequireToken>} />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout, Menu, Avatar } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { LogoutOutlined, UserOutlined } from '@ant-design/icons'
+import { LogoutOutlined, UserOutlined, ReadOutlined } from '@ant-design/icons'
 import { clearToken } from '../utils/auth'
 import { navItemAdmin } from '../utils/constants';
 const { Header, Content,
@@ -35,7 +35,10 @@ function AdminLayout({ children }) {
                 <div style={{ height: "80px", marginBottom: 20 }} >
                     <div class='slde_logo' onClick={() => {
                         navigate("/admin/");
-                    }}>Class Routine Builder</div>
+                    }}> 
+                        <ReadOutlined style={{fontSize:30, marginRight:10}}/> 
+                        Class Routine Builder
+                    </div>
                 </div>
 
                 <Menu

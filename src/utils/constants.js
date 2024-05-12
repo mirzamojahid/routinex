@@ -1,5 +1,18 @@
+import { 
+    PicCenterOutlined, 
+    FormOutlined, 
+    BorderOuterOutlined,
+    AlignCenterOutlined,
+    BankOutlined,
+    ImportOutlined,
+    AuditOutlined,
+    UserOutlined
+ } from '@ant-design/icons'
+
+
 export const base_endpoint = "http://127.0.0.1:8000";
 //export const base_endpoint = "https://api.routinex.shohayok.com";
+
 
 export let headerx = {
     "Accept": "*/*",
@@ -11,12 +24,29 @@ export const aregex = /^\/admin\/.*$/;
 export const navItem = [{ "name": "Student", "route": "/" }, { "name": "Teacher", "route": "/teacher" }, { "name": "Room", "route": "/room" }, { "name": "Empty Room", "route": "/empty" }];
 
 export const navItemAdmin = [
-    { "label": "Routine", "key": "/admin/routine" }, 
-    { "label": "Course Offer", "key": "/admin/course" }, 
-    { "label": "Section", "key": "/admin/section" }, 
-    { "label": "Faculty", "key": "/admin/faculty" }, 
-    { "label": "Rooms", "key": "/admin/room" }, 
-    { "label": "Generate", "key": "/admin/generate" }
+    { "label": "Routine", "key": "/admin/routine", 
+        "icon": <PicCenterOutlined style={{marginRight:5}}/>}, 
+    { "label": "Course Offer", "key": "/admin/course",
+        "icon": <FormOutlined style={{marginRight:5}}/>
+     }, 
+    { "label": "Section", "key": "/admin/section",
+        "icon": <BorderOuterOutlined style={{marginRight:5}}/>
+     }, 
+    { "label": "Faculty", "key": "/admin/faculty",
+        "icon": <AlignCenterOutlined style={{marginRight:5}}/>
+     }, 
+    { "label": "Rooms", "key": "/admin/room", 
+        "icon": <BankOutlined style={{marginRight:5}}/>
+     }, 
+    { "label": "Generate", "key": "/admin/generate",
+        "icon": <ImportOutlined style={{marginRight:5}}/>
+     },
+    { "label": "Admin/Staff", "key": "/admin/list",
+        "icon": <AuditOutlined style={{marginRight:5}}/>
+     },
+    { "label": "Profile", "key": "/admin/profile",
+        "icon": <UserOutlined style={{marginRight:5}}/>
+     },
 ];
 
 export const semesterx = [{ value: "Spring 2025" }, { value: "Fall 2024" }, { value: "Spring 2024" }, { value: "Fall 2023" }, { value: "Spring 2023" }];

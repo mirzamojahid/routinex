@@ -247,3 +247,8 @@ th {
 .width{
     width: 100%;
 }
+
+
+.anticon svg {
+    fill: white;
+  }
