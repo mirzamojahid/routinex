@@ -12,7 +12,7 @@ for (let i = 0; i < 46; i++) {
       <img alt='' src={fahad} width={32} height={32} className='round'></img>
       <span className='mar_l5 ta_center'> {`Fahan Hossain ${i}`}</span>
     </div>,
-    gender: "Male",
+    email: "example@gmail.com",
     desination: `Lecturer`,
     action: <Button>View</Button>
   });
@@ -120,8 +120,8 @@ function Tablex() {
 
     },
     {
-      title: 'Gender',
-      dataIndex: 'gender',
+      title: 'Email',
+      dataIndex: 'email',
     },
     {
       title: 'Desination',
