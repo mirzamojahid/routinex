@@ -14,6 +14,10 @@
     align-items: center;
 }
 
+.noselect {
+    user-select: none;
+}
+
 .ta_center {
     text-align: center;
 }
@@ -144,6 +148,13 @@
     color: #fff;
 }
 
+.fwhite {
+    color: white !important;
+}
+
+.fwhite .ant-card-body {
+    color: white;
+}
 
 
 .custom-checkbox .ant-checkbox-inner {
@@ -244,11 +255,10 @@ th {
     color: whitesmoke;
 }
 
-.width{
+.width {
     width: 100%;
 }
 
-
 .anticon svg {
     fill: white;
-  }
+}

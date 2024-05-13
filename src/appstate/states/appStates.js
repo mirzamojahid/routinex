@@ -2,7 +2,7 @@ export const drawerState = {
     isOpen: false,
 }
 export const routineGetState = {
-    
+
     teacher: [
         "Md. Fokhray Hossain (MFH)",
         "Mr Mahmudul Hasan (MH)",
@@ -479,8 +479,11 @@ export const routineGetState = {
 }
 
 export const generateState = {
-    activeTeacher: "",
-    activeCourse: "",
-    activeSection: "",
-    assigned: [],
+    faculty: [],
+    activeTeacher: null,
+    offered: [],
+    next: false,
+    edit: false,
+    add: false
+
 }

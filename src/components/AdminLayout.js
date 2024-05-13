@@ -35,8 +35,8 @@ function AdminLayout({ children }) {
                 <div style={{ height: "80px", marginBottom: 20 }} >
                     <div class='slde_logo' onClick={() => {
                         navigate("/admin/");
-                    }}> 
-                        <ReadOutlined style={{fontSize:30, marginRight:10}}/> 
+                    }}>
+                        <ReadOutlined style={{ fontSize: 30, marginRight: 10 }} />
                         Class Routine Builder
                     </div>
                 </div>
@@ -74,16 +74,16 @@ function AdminLayout({ children }) {
                             <div className='flex an_center' >
                                 <Avatar
                                     style={{
-                                        marginRight:10
+                                        marginRight: 10
                                     }}
-                                    icon={<UserOutlined />}
+                                    icon={<UserOutlined className='custom_ant_icon' />}
                                 />
                                 <Avatar
                                     style={{
-                                        backgroundColor: '#ffc6c6',
-                                        marginRight:15
+                                        backgroundColor: 'red',
+                                        marginRight: 15
                                     }}
-                                    icon={<LogoutOutlined/>}
+                                    icon={<LogoutOutlined />}
                                     onClick={() => {
                                         clearToken();
                                         navigate("/");

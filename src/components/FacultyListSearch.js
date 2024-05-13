@@ -1,19 +1,26 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { Card, Input } from 'antd';
 import { List } from 'antd';
 import faculty_json from '../assets/faculty.json'
+import { generateFacultyOfferedAction, generateSelectFacultyAction } from '../appstate/actions/generateAction';
 
 const { Search } = Input;
 
 
+
 function FacultyListSearch({ width = 450 }) {
+
+    const dispatch = useDispatch();
+
+    const { activeTeacher } = useSelector((state) => state.generate);
 
     const onSearch = (value, _e, info) => console.log(info?.source, value);
 
     return (
         <div style={{ width: width }}>
             <Card>
-                <Search style={{
+                <Search className='custom_ant_icon' style={{
                     width: "100%",
                 }}
                     height={60}
@@ -23,7 +30,7 @@ function FacultyListSearch({ width = 450 }) {
                 <List
                     itemLayout="vertical"
                     size="large"
-                    
+
                     pagination={{
                         onChange: (page) => {
                             console.log(page);
@@ -32,10 +39,12 @@ function FacultyListSearch({ width = 450 }) {
                     }}
                     dataSource={faculty_json}
                     renderItem={(item) => (
-                        <List.Item className='cursor' onClick={() => {
-                            alert(item['Name & Initial']);
+                        <List.Item className={'cursor noselect'} onClick={() => {
+                            dispatch(generateSelectFacultyAction(item));
+                            dispatch(generateFacultyOfferedAction(["Digital Image Processing", "Big Data & IoT", "Big Data & IoT Lab", "Software Engineering", "Algortithm", "Algorithm Lab"]
+                            ));
                         }}>
-                            <div className='flex an_center '>
+                            <div className={item === activeTeacher ? 'flex an_center faculty_selected ' : 'flex an_center'}>
                                 <img alt='' className='round' src='https://api.dicebear.com/7.x/miniavs/svg?seed=1' width={34} height={34}></img>
                                 <span>{item['Name & Initial']
                                 }</span>
