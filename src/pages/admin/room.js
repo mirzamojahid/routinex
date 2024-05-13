@@ -10,7 +10,7 @@ import {
 } from 'antd'
 import { departmentx } from '../../utils/constants'
 import { useState } from 'react';
-import {MoreOutlined} from '@ant-design/icons'
+
 
 const roomStyle = {
   background: '#0092ff',
@@ -25,8 +25,8 @@ const slotStyle = {
     background: 'rgb(95, 247, 95)',
     padding: "15px 20px",
     margin: 10,
-    borderRadius: 5
-}
+    color:"white",
+    borderRadius: 5}
 
 function AssignedRoom() {
   const [open, setOpen] = useState(false);
@@ -55,12 +55,13 @@ function AssignedRoom() {
             }
           />
           <Button 
-          style={{width:150, color:'white'}} 
+          style={{width:150}} 
           type="primary" 
           className='mar_l5' 
           onClick={showDrawer}
+          children={<span className='fwhite'>Add Room + </span>}
           >
-            Add Room + </Button>
+            </Button>
           <Drawer
         title="Add Room"
         width={400}
@@ -82,28 +83,28 @@ function AssignedRoom() {
         >
           <Row gutter={[16, 24]}>
             <Col className="gutter-row" span={6}>
-              <Card hoverable style={roomStyle}>KT-803</Card>
+              <Card  hoverable style={roomStyle} className='fwhite'>KT-803</Card>
+            </Col>
+            <Col  className="gutter-row" span={6}>
+              <Card hoverable style={roomStyle} className='fwhite'>KT-803</Card>
             </Col>
             <Col className="gutter-row" span={6}>
-              <Card hoverable style={roomStyle}>KT-803</Card>
+              <Card hoverable style={roomStyle} className='fwhite'>KT-803</Card>
             </Col>
             <Col className="gutter-row" span={6}>
-              <Card hoverable style={roomStyle}>KT-803</Card>
+              <Card hoverable style={roomStyle} className='fwhite'>KT-803</Card>
             </Col>
             <Col className="gutter-row" span={6}>
-              <Card hoverable style={roomStyle}>KT-803</Card>
+              <Card hoverable style={roomStyle} className='fwhite'>KT-803</Card>
             </Col>
             <Col className="gutter-row" span={6}>
-              <Card hoverable style={roomStyle}>KT-803</Card>
+              <Card hoverable style={roomStyle} className='fwhite'>KT-803</Card>
             </Col>
             <Col className="gutter-row" span={6}>
-              <Card hoverable style={roomStyle}>KT-803</Card>
-            </Col>
-            <Col className="gutter-row" span={6}>
-              <Card hoverable style={{...roomStyle, background:"rgb(252, 57, 57)"}}>KT-803</Card>
+              <Card hoverable style={{...roomStyle, background:"rgb(252, 57, 57)"}} className='fwhite'>KT-803</Card>
             </Col>
             <Col className="gutter-row" span={6} >
-              <Card hoverable style={roomStyle}>KT-803</Card>
+              <Card hoverable style={roomStyle} className='fwhite'>KT-803</Card>
             </Col>
             <Col span={8}>
             </Col>

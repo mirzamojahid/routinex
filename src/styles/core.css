@@ -144,6 +144,13 @@
     color: #fff;
 }
 
+.fwhite{
+    color: white !important;
+}
+
+.fwhite .ant-card-body{
+    color: white;
+}
 
 
 .custom-checkbox .ant-checkbox-inner {
