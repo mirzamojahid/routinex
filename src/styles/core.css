@@ -14,6 +14,10 @@
     align-items: center;
 }
 
+.noselect {
+    user-select: none;
+}
+
 .ta_center {
     text-align: center;
 }

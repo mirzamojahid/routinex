@@ -479,8 +479,9 @@ export const routineGetState = {
 }
 
 export const generateState = {
-    activeTeacher: "",
-    activeCourse: "",
-    activeSection: "",
-    assigned: [],
+    faculty:[],
+    activeTeacher: null,
+    offered: [],
+    next:false
+
 }

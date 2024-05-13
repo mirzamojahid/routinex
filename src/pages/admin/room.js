@@ -109,6 +109,7 @@ function AssignedRoom() {
             <Col span={8}>
             </Col>
           </Row>
+          
         </div>
         <div 
         style={{

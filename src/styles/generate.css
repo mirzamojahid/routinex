@@ -52,12 +52,17 @@
 
 .next_float .ant-float-btn-body {
     border-radius: 12px !important;
-    background-color: rgb(68, 252, 68);
+    background-color: #89f5a9;
+}
+
+.next_float .ant-float-btn-body span {
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .next_float .ant-float-btn-body:hover {
     border-radius: 12px !important;
-    background-color: rgb(68, 252, 68);
+    background-color: #89f5a9;
 }
 
 
@@ -79,9 +84,25 @@
 }
 
 
-.custom_ant_icon  svg {
+.custom_ant_icon svg {
     fill: black !important;
 }
+
 .custom_ant_icon .anticon svg {
     fill: black !important;
+}
+
+.faculty_selected {
+    border-radius: 10px;
+    height: 50px;
+    color: white;
+    background-color: #89f5a9;
+}
+
+.faculty_selected span {
+    color: white;
+}
+
+.ant-btn-primary span {
+    color: white !important;
 }
