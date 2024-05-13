@@ -42,9 +42,12 @@ export const generateReducer = (state = generateState, action) => {
                 offered: action.playload
             }
         case GENERATE_FACULTY_REMOVE_OFFERED:
+
+            const courses = state.offered.filter(course => course !== action.playload);
+
             return {
                 ...state,
-                offered: []
+                offered: courses
             }
         case GENERATE_FACULTY_LIST:
             return {
