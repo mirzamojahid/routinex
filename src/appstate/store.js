@@ -1,9 +1,10 @@
 
 import { createStore, combineReducers } from 'redux';
-import {  drawerReducer } from './reducers/appReducers';
+import {  drawerReducer, generateReducer } from './reducers/appReducers';
 
 const rootReducers = combineReducers({
     drawer: drawerReducer,
+    generate:generateReducer,
 })
 
 const store = createStore(rootReducers);
