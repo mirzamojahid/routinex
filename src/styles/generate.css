@@ -41,11 +41,47 @@
     margin-right: 5px;
 }
 
-.g_active{
+.g_active {
     background-color: rgb(182, 248, 182);
 }
 
 .g_item:hover {
     border-radius: 8px;
     background-color: antiquewhite;
+}
+
+.next_float .ant-float-btn-body {
+    border-radius: 12px !important;
+    background-color: rgb(68, 252, 68);
+}
+
+.next_float .ant-float-btn-body:hover {
+    border-radius: 12px !important;
+    background-color: rgb(68, 252, 68);
+}
+
+
+.next_float .ant-float-btn-body .ant-float-btn-content {
+    width: 100px !important;
+}
+
+.ant-float-btn-content {
+    width: 200px !important;
+}
+
+.next_float .ant-float-btn-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.next_float .ant-float-btn-icon span {
+    color: white;
+}
+
+
+.custom_ant_icon  svg {
+    fill: black !important;
+}
+.custom_ant_icon .anticon svg {
+    fill: black !important;
 }

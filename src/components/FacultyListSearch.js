@@ -13,7 +13,7 @@ function FacultyListSearch({ width = 450 }) {
     return (
         <div style={{ width: width }}>
             <Card>
-                <Search style={{
+                <Search className='custom_ant_icon' style={{
                     width: "100%",
                 }}
                     height={60}
