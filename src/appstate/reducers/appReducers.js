@@ -1,4 +1,4 @@
-import { DRAWER_OPEN, DRAWER_CLOSE, GENERATE_SELECT_FACULTY, GENERATE_DESELECT_FACULTY, GENERATE_FACULTY_REMOVE_OFFERED, GENERATE_FACULTY_OFFERED, GENERATE_FACULTY_LIST, GENERATE_NEXT_ENABLE, GENERATE_NEXT_DISABLE } from "../constants/appConstants";
+import { DRAWER_OPEN, DRAWER_CLOSE, GENERATE_SELECT_FACULTY, GENERATE_DESELECT_FACULTY, GENERATE_FACULTY_REMOVE_OFFERED, GENERATE_FACULTY_OFFERED, GENERATE_FACULTY_LIST, GENERATE_NEXT_ENABLE, GENERATE_NEXT_DISABLE, GENERATE_EDIT_ENABLE, GENERATE_EDIT_DISABLE, GENERATE_ADD_ENABLE, GENERATE_ADD_DISABLE } from "../constants/appConstants";
 import { generateState, drawerState } from "../states/appStates";
 
 
@@ -63,6 +63,27 @@ export const generateReducer = (state = generateState, action) => {
             return {
                 ...state,
                 next: false,
+            }
+        case GENERATE_EDIT_ENABLE:
+            return {
+                ...state,
+                edit: true,
+            }
+        case GENERATE_EDIT_DISABLE:
+            return {
+                ...state,
+                edit: false,
+            }
+
+        case GENERATE_ADD_ENABLE:
+            return {
+                ...state,
+                add: true,
+            }
+        case GENERATE_ADD_DISABLE:
+            return {
+                ...state,
+                add: false,
             }
         default:
             return state;

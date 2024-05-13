@@ -3,7 +3,8 @@ import { Button, Card, List, Modal } from 'antd'
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { generateFacultyRemoveOfferedAction } from '../../appstate/actions/generateAction';
+import { generateFacultyRemoveOfferedAction, generateOfferedEditDisableAction, generateOfferedEditEnableAction } from '../../appstate/actions/generateAction';
+import TimeslotRoom from './TimeslotRoom';
 
 
 const { confirm } = Modal;
@@ -12,7 +13,7 @@ const { confirm } = Modal;
 function OfferedCourse({ width = 350 }) {
 
     const dispatch = useDispatch()
-    const { offered } = useSelector((state) => state.generate);
+    const { offered, edit } = useSelector((state) => state.generate);
 
     const showDeleteConfirm = (item) => {
         confirm({
@@ -39,12 +40,27 @@ function OfferedCourse({ width = 350 }) {
 
             </div>}>
 
+                <Modal
+                    title='Room and Timeslot Select'
+                    open={edit}
+                    centered
+                    width={1000}
+                    footer={false}
+                    children={<TimeslotRoom></TimeslotRoom>}
+                    onCancel={() => {
+                        dispatch(generateOfferedEditDisableAction());
+                    }}
+                ></Modal>
+
+
                 <List dataSource={offered} renderItem={(item) => {
                     return <List.Item>
                         <div className='width flex jy_sb'>
                             <div>{item}</div>
                             <div>
-                                <EditOutlined style={{ fontSize: "18px" }} className='cursor mar_r5 custom_ant_icon' />
+                                <EditOutlined onClick={() => {
+                                    dispatch(generateOfferedEditEnableAction());
+                                }} style={{ fontSize: "18px" }} className='cursor mar_r5 custom_ant_icon' />
                                 <DeleteOutlined onClick={() => {
                                     showDeleteConfirm(item);
                                 }

@@ -106,3 +106,7 @@
 .ant-btn-primary span {
     color: white !important;
 }
+
+.ant-modal-close-icon svg {
+    fill: red;
+}
