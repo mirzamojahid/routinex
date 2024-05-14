@@ -53,7 +53,44 @@ export const semesterx = [{ value: "Spring 2025" }, { value: "Fall 2024" }, { va
 
 export const termx = [{ value: "1st Year(1st Term)" }, { value: "1st Year(2nd Term)" }, { value: "2nd Year(1st Term)" }, { value: "2nd Year(2nd Term)" }, { value: "3rd Year(1st Term)" }, { value: "3rd Year(2nd Term)" }, { value: "4th Year(1st Term)" }, { value: "4th Year(2nd Term)" }, { value: "Univeral Retake" }];
 
-export const departmentx = [{ value: "CSE" }, { value: "EEE" }, { value: "NFE" }, { value: "CVIL" }, { value: "ENGLISH" }, { value: "BBA" }, { value: "LAW" }, { value: "PHARMACY" }];
+export const departmentx = [
+  { value: "CSE" }, 
+  { value: "EEE" }, 
+  { value: "NFE" }, 
+  { value: "CVIL" }, 
+  { value: "ENGLISH" }, 
+  { value: "BBA" }, 
+  { value: "LAW" }, 
+  { value: "PHARMACY" }
+];
+
+export const building = [
+  { value: "KT" }, 
+  { value: "AB4" }, 
+  { value: "AB1" }, 
+  { value: "AB0" }, 
+  { value: "CT" }, 
+  { value: "CT2" },
+];
+
+export const floor = [
+  { value: "1" }, 
+  { value: "2" }, 
+  { value: "3" }, 
+  { value: "4" }, 
+  { value: "5" }, 
+  { value: "6" }, 
+  { value: "7" }, 
+  { value: "8" }
+];
+export const days = [
+  { value: "Sat" }, 
+  { value: "Sun" }, 
+  { value: "Mon" }, 
+  { value: "Tue" }, 
+  { value: "Wed" }, 
+  { value: "Thu" }, 
+];
 
 
 export const batchx = [

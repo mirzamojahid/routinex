@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/generate.css'
-import { options } from '../../utils/constants'
-import { Select } from 'antd'; 
+// import { options } from '../../utils/constants'
+// import { Select } from 'antd'; 
 import FacultyListSearch from '../../components/FacultyListSearch';
 import OfferedCourse from '../../components/Generate/OfferedCourse';
 

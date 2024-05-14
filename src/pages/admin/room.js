@@ -1,14 +1,14 @@
 import React from 'react'
 import { 
-  AutoComplete, 
   Button, 
   Card, 
   List,
   Row, 
   Col,
   Drawer,
+  Select,
 } from 'antd'
-import { departmentx } from '../../utils/constants'
+import { building, floor, days } from '../../utils/constants'
 import { useState } from 'react';
 
 
@@ -38,21 +38,55 @@ function AssignedRoom() {
     setOpen(false);
   };
 
+  const buildingChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+
+  const floorChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+
+  const dayChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+
   return (
     <div>
       <Card hoverable title={<div className='flex jy_sb'>
         <span>Rooms</span>
         <div className='flex'>
-          <AutoComplete
+          <Select
             style={{
-              width: 200,
-              marginRight:20
+              width: 150,
+              marginRight: 30
             }}
-            options={departmentx}
-            placeholder="Room by Department"
-            filterOption={(inputValue, option) =>
-              option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-            }
+            showSearch
+            placeholder="Select building"
+            optionFilterProp="children"
+            onChange={buildingChange}
+            options={building}
+          />
+          <Select
+            style={{
+              width: 150,
+              marginRight: 30
+            }}
+            showSearch
+            placeholder="Select floor"
+            optionFilterProp="children"
+            onChange={floorChange}
+            options={floor}
+          />
+          <Select
+            style={{
+              width: 150,
+              marginRight: 30
+            }}
+            showSearch
+            placeholder="Select day"
+            optionFilterProp="children"
+            onChange={dayChange}
+            options={days}
           />
           <Button 
           style={{width:150}} 
