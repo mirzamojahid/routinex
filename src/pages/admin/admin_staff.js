@@ -90,7 +90,7 @@ function AdminStaff() {
               <img style={imgStyle} src={adminImage} alt=''/>
             </div>
             <div className="slot-content">
-              <h3>Md Abdur Rakib</h3>
+              <h3 style={{width:180}}>Md Abdur Rakib</h3>
               <p>Admin</p>
             </div>
           </div>
@@ -99,7 +99,7 @@ function AdminStaff() {
               <img style={imgStyle} src={adminImage} alt=''/>
             </div>
             <div className="slot-content">
-              <h3>Md Abdur Rakib</h3>
+              <h3 style={{width:180}}>Md Abdur Rakib</h3>
               <p>Staff</p>
             </div>
           </div>
@@ -108,7 +108,7 @@ function AdminStaff() {
               <img style={imgStyle} src={adminImage} alt=''/>
             </div>
             <div className="slot-content">
-              <h3>Md Abdur Rakib</h3>
+              <h3 style={{width:180}}>Md Abdur Rakib</h3>
               <p>Admin</p>
             </div>
           </div>
@@ -117,10 +117,48 @@ function AdminStaff() {
         style={{
           width: "600px", 
           border: "1px solid rgba(7, 7, 7, 0.2)",
-          marginLeft: "30px"
+          marginLeft: "30px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
         >
-          {/* display of admin details */}
+        <div style={{marginTop:20, display: "flex", flexDirection: "column",alignItems: "center",}}>
+          <img style={{
+            height:180, 
+            width:180, 
+            borderRadius: 30, 
+            border:"1px solid rgb(78, 255, 158)"
+            }}
+            src={adminImage} alt=''/>
+          <h3 style={{marginTop:10}}>Md Abdur Rakib</h3>
+          <p>Admin</p>
+        </div>
+        <div style={{paddingLeft: 40}}>
+          <div style={{display:"flex", margin:15}}>
+            <h3 style={{width:180}}>User Name:</h3>
+            <p>abdurrakib</p>
+          </div>
+          <div style={{display:"flex", margin: 15}}>
+            <h3 style={{width:180}}>Email:</h3>
+            <p>abdurrakib@gmail.com</p>
+          </div>
+          <div style={{display:"flex", margin: 15}}>
+            <h3 style={{width:180}}>Phone Number:</h3>
+            <p>+8801759728416</p>
+          </div>
+          <div style={{display:"flex", margin: 15}}>
+            <h3 style={{width:180}}>Joined Date:</h3>
+            <p>16 January 2024</p>
+          </div>
+        </div>
+        <Button 
+          type="primary" 
+          className='mar_l5'
+          children={<span className='fwhite'>Update</span>}
+          >
+            </Button>
+        <span className='fwhite'>Update</span>
         </div>
       </div>
       </Card>
