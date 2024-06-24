@@ -187,3 +187,8 @@ export const options=[
         label: 'Cancelled',
       },
 ];
+
+export const roles = [
+  {value: "Admin"},
+  {value: "Staff"},
+]
