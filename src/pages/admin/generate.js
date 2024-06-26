@@ -12,6 +12,9 @@ import { Modal, FloatButton } from 'antd';
 function Genrate() {
     const dispatch = useDispatch()
     const { activeTeacher, next } = useSelector((state) => state.generate);
+
+
+    
     return (<div className='flex'>
         <FacultyListSearch></FacultyListSearch>
         <div className='mar_l5 mar_r5'></div>

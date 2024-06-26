@@ -1,6 +1,47 @@
 export const drawerState = {
     isOpen: false,
 }
+
+export const roomState = {
+    room: [],
+    selected: null,
+    floor_selected: null,
+    building_selected: null,
+    day_selected: 'Sat',
+    room_type:null,
+}
+
+export const routineState = {
+    list: [],
+}
+
+
+export const courseState = {
+    list: [],
+    offered: [],
+    selected: null
+}
+
+
+export const facultyState = {
+    list: [],
+    selected: null,
+}
+
+
+export const sectionState = {
+    list: [],
+    selected: null,
+}
+
+
+export const adminStaffState = {
+    list: [],
+    selected: null,
+    iam: null
+}
+
+
 export const routineGetState = {
 
     teacher: [

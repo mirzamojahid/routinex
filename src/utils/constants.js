@@ -83,6 +83,12 @@ export const floor = [
   { value: "7" }, 
   { value: "8" }
 ];
+
+
+export const roomtype = [
+  { value: "THEORY" }, 
+  { value: "LAB" }
+];
 export const days = [
   { value: "Sat" }, 
   { value: "Sun" }, 

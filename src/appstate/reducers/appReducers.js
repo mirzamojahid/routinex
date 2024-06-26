@@ -26,7 +26,6 @@ export const generateReducer = (state = generateState, action) => {
     switch (action.type) {
 
         case GENERATE_SELECT_FACULTY:
-            console.log(434343);
             return {
                 ...state,
                 activeTeacher: action.playload
@@ -52,7 +51,7 @@ export const generateReducer = (state = generateState, action) => {
         case GENERATE_FACULTY_LIST:
             return {
                 ...state,
-                faculty: [],
+                faculty: action.playload,
             }
         case GENERATE_NEXT_ENABLE:
             return {

@@ -4,6 +4,9 @@ import { termx } from '../../../utils/constants'
 import Tree from 'antd/es/tree/Tree'
 
 function Course() {
+
+
+  
   return (
     <div>
       <Card title={<div className='flex jy_sb'>
