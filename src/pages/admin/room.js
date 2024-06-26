@@ -63,6 +63,7 @@ function AssignedRoom() {
 
 
   const FetcInfo = async (floorx = null, buildingx = null,room_type=null) => {
+   try{
     headerx['Authorization'] = `Bearer ${CheckToken()}`;
     let url = base_endpoint + "/api/diu/rooms/";
     let params = [];
@@ -89,10 +90,13 @@ function AssignedRoom() {
     if (res.status === 200) {
       dispatch(roomSelectedAction(null));
       dispatch(roomlistAction(datax));
-    } else if (res.status == 401) {
+    } else if (res.status === 401) {
       clearToken();
       window.location.href = "/login";
     }
+   }catch(err){
+    console.log(err);
+   }
 
   }
 

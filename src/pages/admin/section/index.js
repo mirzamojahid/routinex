@@ -13,37 +13,41 @@ function Section() {
   const { section_list, section_department, section_semester } = useSelector((state) => state.section);
 
   const FetchInfo = async (semester = null, department = null) => {
-    headerx['Authorization'] = `Bearer ${CheckToken()}`;
-    let url = base_endpoint + "/api/diu/sections/";
-    let params = [];
-    if (semester !== null) {
-      params.push(`semester__name=${encodeURIComponent(semester)}`);
-    }
-    if (department !== null) {
-      params.push(`department__name=${encodeURIComponent(department)}`);
-    }
-    if (params.length > 0) {
-      url += '?' + params.join('&')
-    }
-    const res = await fetch(url, {
-      method: "GET",
-      headers: headerx,
 
-    })
-    const datax = await res.json();
-    if (res.status === 200) {
-      dispatch(sectionlistAction(datax));
-    } else if (res.status === 401) {
-      clearToken();
-      window.location.href = "/login";
-    }
+    try {
+      headerx['Authorization'] = `Bearer ${CheckToken()}`;
+      let url = base_endpoint + "/api/diu/sections/";
+      let params = [];
+      if (semester !== null) {
+        params.push(`semester__name=${encodeURIComponent(semester)}`);
+      }
+      if (department !== null) {
+        params.push(`department__name=${encodeURIComponent(department)}`);
+      }
+      if (params.length > 0) {
+        url += '?' + params.join('&')
+      }
+      const res = await fetch(url, {
+        method: "GET",
+        headers: headerx,
 
+      })
+      const datax = await res.json();
+      if (res.status === 200) {
+        dispatch(sectionlistAction(datax));
+      } else if (res.status === 401) {
+        clearToken();
+        window.location.href = "/login";
+      }
+    } catch (err) {
+      console.log(err);
+    }
   }
 
 
   useEffect(() => {
-    if(section_list !==null && section_list.length === 0){
-      FetchInfo(section_semester,section_department);
+    if (section_list !== null && section_list.length === 0) {
+      FetchInfo(section_semester, section_department);
     }
   }, [])
 
@@ -61,10 +65,10 @@ function Section() {
             options={semesterx}
             onChange={(value) => {
               dispatch(sectionSemesterAction(value));
-              FetchInfo(value,section_department);
+              FetchInfo(value, section_department);
             }}
             placeholder="Select Semester"
-         
+
           />
 
           <Select
@@ -76,9 +80,9 @@ function Section() {
             placeholder="Select Department"
             onChange={(value) => {
               dispatch(sectionDepartmentAction(value));
-              FetchInfo(section_semester,value);
+              FetchInfo(section_semester, value);
             }}
-            
+
           />
           <Button className='mar_l5'>Add + </Button>
         </div>

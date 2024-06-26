@@ -9,7 +9,7 @@ import {
 } from 'antd'
 import { base_endpoint, headerx, roles } from '../../utils/constants';
 import { useState } from 'react';
-import { CheckToken } from '../../utils/auth';
+import { CheckToken, clearToken } from '../../utils/auth';
 
 const imgStyle = {
   width: 40,
@@ -40,15 +40,22 @@ function AdminStaff() {
 
 
   const FetchStaffInfo = async () => {
-    headerx['Authorization'] = `Bearer ${CheckToken()}`;
-    const res = await fetch(base_endpoint + "/api/account/staff/", {
-      method: "POST",
-      headers: headerx
-    })
-    const datax = await res.json();
-    if (res.status == 200) {
-      setStaffInfo(datax['data']);
-      setListStaffInfo(datax['list']);
+    try {
+      headerx['Authorization'] = `Bearer ${CheckToken()}`;
+      const res = await fetch(base_endpoint + "/api/account/staff/", {
+        method: "POST",
+        headers: headerx
+      })
+      const datax = await res.json();
+      if (res.status === 200) {
+        setStaffInfo(datax['data']);
+        setListStaffInfo(datax['list']);
+      } else if (res.status === 401) {
+        clearToken();
+        window.location.href = "/login";
+      }
+    } catch (err) {
+      console.log(err);
     }
 
   }
@@ -116,7 +123,7 @@ function AdminStaff() {
                 </div>
                 <div className="slot-content">
                   <h3 style={{ width: 180 }}>{e.first_name + e.last_name}</h3>
-                  <p>{e.user.is_admin ==true ?"Admin":"Staff"}</p>
+                  <p>{e.user.is_admin == true ? "Admin" : "Staff"}</p>
                 </div>
               </div>;
             })}

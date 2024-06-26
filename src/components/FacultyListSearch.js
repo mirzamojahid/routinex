@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Card, Input } from 'antd';
 import { List } from 'antd';
-import faculty_json from '../assets/faculty.json'
 import { generateFacultyListAction, generateFacultyOfferedAction, generateSelectFacultyAction } from '../appstate/actions/generateAction';
-import { CheckToken } from '../utils/auth';
+import { CheckToken, clearToken } from '../utils/auth';
 import { base_endpoint, headerx } from '../utils/constants';
 
 const { Search } = Input;
@@ -20,14 +19,22 @@ function FacultyListSearch({ width = 450 }) {
     const onSearch = (value, _e, info) => console.log(info?.source, value);
 
     const FetchInfo = async () => {
-        headerx['Authorization'] = `Bearer ${CheckToken()}`;
-        const res = await fetch(base_endpoint + "/api/diu/teachers/", {
-            method: "GET",
-            headers: headerx
-        })
-        const datax = await res.json();
-        if (res.status === 200) {
-            dispatch(generateFacultyListAction(datax))
+
+        try {
+            headerx['Authorization'] = `Bearer ${CheckToken()}`;
+            const res = await fetch(base_endpoint + "/api/diu/teachers/", {
+                method: "GET",
+                headers: headerx
+            })
+            const datax = await res.json();
+            if (res.status === 200) {
+                dispatch(generateFacultyListAction(datax))
+            } else if (res.status === 401) {
+                clearToken();
+                window.location.href = "/login";
+            }
+        } catch (err) {
+            console.log(err);
         }
 
     }
