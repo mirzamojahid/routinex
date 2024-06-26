@@ -99,24 +99,6 @@ export const days = [
 ];
 
 
-export const batchx = [
-    "56_A",
-    "56_B",
-    "56_C",
-    "56_D",
-    "56_E",
-    "56_F",
-    "57_A",
-    "57_B",
-    "57_C",
-    "57_D",
-    "58_A",
-    "58_B",
-    "58_C",
-    "58_D",
-    "58_E",
-    "59_A",
-];
 
 
 export const options=[

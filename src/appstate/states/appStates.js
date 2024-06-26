@@ -30,8 +30,11 @@ export const facultyState = {
 
 
 export const sectionState = {
-    list: [],
-    selected: null,
+    section_list: [],
+    section_selected: null,
+    section_semester:null,
+    section_department:null,
+
 }
 
 
