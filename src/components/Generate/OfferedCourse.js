@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Card, List, Modal } from 'antd'
-import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
+import { DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons'
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { generateFacultyOfferedAddAction, generateFacultyRemoveOfferedAction, generateOfferCourseSelectedAction, generateOfferCourseUnselectedAction, generateOfferSectionSelectedAction, generateOfferSectionUnselectedAction, generateOfferedAddDisableAction, generateOfferedAddEnableAction, generateOfferedEditDisableAction, generateOfferedEditEnableAction } from '../../appstate/actions/generateAction';
@@ -11,7 +11,7 @@ import { base_endpoint, headerx } from '../../utils/constants';
 import { courselistAction } from '../../appstate/actions/courseAction';
 import { sectionlistAction } from '../../appstate/actions/sectionAction';
 
-import {roomSelectedAction, roomlistAction } from '../../appstate/actions/roomAction';
+import { roomSelectedAction, roomlistAction } from '../../appstate/actions/roomAction';
 const { confirm } = Modal;
 
 
@@ -53,14 +53,11 @@ function OfferedCourse({ width = 350 }) {
             })
             const datax = await res.json();
 
-            console.log(datax);
-
             if (res.status === 201) {
+                dispatch(generateFacultyOfferedAddAction(datax));
                 dispatch(generateOfferedAddDisableAction());
                 dispatch(generateOfferCourseUnselectedAction());
                 dispatch(generateOfferSectionUnselectedAction());
-                dispatch(generateFacultyOfferedAddAction(datax));
-
             } else if (res.status === 401) {
                 clearToken();
                 window.location.href = "/login";
@@ -148,7 +145,7 @@ function OfferedCourse({ width = 350 }) {
 
 
 
-    const FetchRoomSlot= async (floorx = null, buildingx = null, room_type = null) => {
+    const FetchRoomSlot = async (floorx = null, buildingx = null, room_type = null) => {
         try {
             headerx['Authorization'] = `Bearer ${CheckToken()}`;
             let url = base_endpoint + "/api/diu/rooms/";
@@ -163,15 +160,15 @@ function OfferedCourse({ width = 350 }) {
                 params.push(`type=${encodeURIComponent(room_type)}`);
             }
 
-
             if (params.length > 0) {
                 url += '?' + params.join('&')
             }
+
             const res = await fetch(url, {
                 method: "GET",
                 headers: headerx,
-
             })
+
             const datax = await res.json();
             if (res.status === 200) {
                 dispatch(roomSelectedAction(null));
@@ -185,6 +182,32 @@ function OfferedCourse({ width = 350 }) {
         }
 
     }
+
+
+
+    const checkRoutineExists = async (offered_id) => {
+        try {
+            headerx['Authorization'] = `Bearer ${CheckToken()}`;
+            const res = await fetch(base_endpoint + "/api/diu/api/check-routine/?id=" + offered_id, {
+                method: "GET",
+                headers: headerx,
+            })
+            const datax = await res.json();
+            if (res.status === 200) {
+                return datax.routine_exist;
+
+            }
+            else if (res.status === 401) {
+                clearToken();
+                window.location.href = "/login";
+                return false;
+            }
+        } catch (err) {
+            console.log(err);
+            return true;
+        }
+    }
+
 
     return (
         <div style={{ width: width }}>
@@ -220,8 +243,8 @@ function OfferedCourse({ width = 350 }) {
                             <div className='flex'>
 
                                 <Card title="Course List" style={{ width: "50%" }}>
-                                    <List pagination={true} dataSource={course_list} renderItem={(item) => {
-                                        return <List.Item onClick={() => {
+                                    <List pagination={true}   dataSource={course_list} renderItem={(item) => {
+                                        return <List.Item key={`course_${item.id}`}  onClick={() => {
                                             if (item === offer_selected_course) {
                                                 dispatch(generateOfferCourseUnselectedAction());
                                             } else {
@@ -234,7 +257,7 @@ function OfferedCourse({ width = 350 }) {
 
                                 <Card title="Section List" style={{ width: "50%" }}>
                                     <List pagination={true} dataSource={section_list} renderItem={(item) => {
-                                        return <List.Item style={offer_selected_section === item ? { backgroundColor: "green", color: "white" } : null} onClick={() => {
+                                        return <List.Item key={`section_${item.id}`} style={offer_selected_section === item ? { backgroundColor: "green", color: "white" } : null} onClick={() => {
                                             if (item === offer_selected_section) {
                                                 dispatch(generateOfferSectionUnselectedAction());
                                             } else {
@@ -259,14 +282,21 @@ function OfferedCourse({ width = 350 }) {
 
                 </Modal>
                 <List dataSource={offered} renderItem={(item) => {
-                    return <List.Item>
+                    return <List.Item key={`offered_${item.id}`} >
                         <div className='width flex jy_sb'>
                             <div>{item.course} ({item.section})</div>
                             <div>
-                                <EditOutlined onClick={() => {
-                                    FetchRoomSlot();
-                                    dispatch(generateOfferCourseSelectedAction(item));
-                                    dispatch(generateOfferedEditEnableAction());
+
+                                <PlusOutlined onClick={async () => {
+                                    const ret = await checkRoutineExists(item.id);
+                                    if (ret === false) {
+                                        FetchRoomSlot();
+                                        dispatch(generateOfferCourseSelectedAction(item));
+                                        dispatch(generateOfferedEditEnableAction());
+                                    } else {
+                                        alert("Already offered course routine assigned")
+                                    }
+
                                 }} style={{ fontSize: "18px" }} className='cursor mar_r5 custom_ant_icon' />
                                 <DeleteOutlined onClick={() => {
                                     showDeleteConfirm(item);

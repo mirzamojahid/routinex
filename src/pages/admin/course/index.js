@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { AutoComplete, Button, Card, Input, List, Modal, Select } from 'antd'
-import { base_endpoint, departmentx, headerx, roomtype, semesterx, termx } from '../../../utils/constants'
+import { Button, Card, Input, List, Modal, Select } from 'antd'
+import { base_endpoint, departmentx, headerx, roomtype, semesterx } from '../../../utils/constants'
 import { CheckToken, clearToken } from '../../../utils/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { courseSemesterAction, courselistAction } from '../../../appstate/actions/courseAction';
@@ -215,8 +215,6 @@ function Course() {
           }}>{item.title} {item.name} - {item.code} - {item.credit}(Cr.) ({item.department})</List.Item>
         }}>
         </List>
-
-
 
         {/* <table className='table'>
           <tr>
