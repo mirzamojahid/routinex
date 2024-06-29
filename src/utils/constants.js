@@ -49,7 +49,7 @@ export const navItemAdmin = [
      },
 ];
 
-export const semesterx = [{ value: "Spring 2025" }, { value: "Fall 2024" }, { value: "Spring 2024" }, { value: "Fall 2023" }, { value: "Spring 2023" }];
+export const semesterx = [{ value: "Spring_2025" }, { value: "Fall_2024" }, { value: "Spring_2024" }, { value: "Fall_2023" }, { value: "Spring_2023" }];
 
 export const termx = [{ value: "1st Year(1st Term)" }, { value: "1st Year(2nd Term)" }, { value: "2nd Year(1st Term)" }, { value: "2nd Year(2nd Term)" }, { value: "3rd Year(1st Term)" }, { value: "3rd Year(2nd Term)" }, { value: "4th Year(1st Term)" }, { value: "4th Year(2nd Term)" }, { value: "Univeral Retake" }];
 

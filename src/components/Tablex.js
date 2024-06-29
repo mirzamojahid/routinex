@@ -1,122 +1,55 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Button, Input, Space, Table } from 'antd';
 import fahad from '../images/fahadsir.jpeg'
-import { SearchOutlined } from '@ant-design/icons';
-import Highlighter from 'react-highlight-words';
+import { base_endpoint, headerx } from '../utils/constants';
+import { CheckToken, clearToken } from '../utils/auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { teacherlistAction } from '../appstate/actions/teacherAction';
 
-const data = [];
-for (let i = 0; i < 46; i++) {
-  data.push({
-    key: i,
-    name: <div className='flex an_center'>
-      <img alt='' src={fahad} width={32} height={32} className='round'></img>
-      <span className='mar_l5 ta_center'> {`Fahan Hossain ${i}`}</span>
-    </div>,
-    email: "example@gmail.com",
-    desination: `Lecturer`,
-    action: <Button>View</Button>
-  });
-}
+const { Column, ColumnGroup } = Table;
+
 
 function Tablex() {
 
-  const [searchText, setSearchText] = useState('');
-  const [searchedColumn, setSearchedColumn] = useState('');
-  const searchInput = useRef(null);
 
-  const handleSearch = (selectedKeys, confirm, dataIndex) => {
-
-    console.log(selectedKeys);
-    confirm();
-    setSearchText(selectedKeys[0]);
-    setSearchedColumn(dataIndex);
-  };
-
-  const handleReset = (clearFilters) => {
-    clearFilters();
-    setSearchText('');
-  };
+  const dispatch = useDispatch()
+  const { teacher_list, teacher_selected, teacher_department } = useSelector((state) => state.teacher);
 
 
-  const getColumnSearchProps = (dataIndex) => ({
-    filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
-      <div
-        style={{
-          padding: 8,
-        }}
-        onKeyDown={(e) => e.stopPropagation()}
-      >
-        <Input
-          ref={searchInput}
-          placeholder={`Search ${dataIndex}`}
-          value={selectedKeys[0]}
-          onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-          onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-          style={{
-            marginBottom: 8,
-            display: 'block',
-          }}
-        />
-        <Space>
-          <Button
-            type="primary"
-            onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-            icon={<SearchOutlined />}
-            size="small"
-            style={{
-              width: 120,
-            }}
-          >
-            Search
-          </Button>
-          <Button
-            onClick={() => clearFilters && handleReset(clearFilters)}
-            size="small"
-            style={{
-              width: 120,
-            }}
-          >
-            Reset
-          </Button>
-
-        </Space>
-      </div>
-    ),
-    filterIcon: (filtered) => (
-      <SearchOutlined
-        style={{
-          color: filtered ? '#1677ff' : undefined,
-        }}
-      />
-    ),
-    onFilter: (value, record) =>
-      record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
-    onFilterDropdownOpenChange: (visible) => {
-      if (visible) {
-        setTimeout(() => searchInput.current?.select(), 100);
+  const FetchInfo = async () => {
+    try {
+      headerx['Authorization'] = `Bearer ${CheckToken()}`;
+      const res = await fetch(base_endpoint + "/api/diu/teachers/", {
+        method: "GET",
+        headers: headerx
+      })
+      const datax = await res.json();
+      if (res.status === 200) {
+        dispatch(teacherlistAction(datax));
+      } else if (res.status === 401) {
+        clearToken();
+        window.location.href = "/login";
       }
-    },
-    render: (text) =>
-      searchedColumn === dataIndex ? (
-        <Highlighter
-          highlightStyle={{
-            backgroundColor: '#ffc069',
-            padding: 0,
-          }}
-          searchWords={[searchText]}
-          autoEscape
-          textToHighlight={text ? text.toString() : ''}
-        />
-      ) : (
-        text
-      ),
-  });
+    } catch (err) {
+      console.log(err);
+    }
+
+  }
+
+
+  useEffect(() => {
+
+    if (teacher_list !== null && teacher_list.length === 0) {
+      FetchInfo();
+    }
+  }, []);
+
+
 
   const columns = [
     {
       title: 'Name',
       dataIndex: 'name',
-      ...getColumnSearchProps('name'),
 
     },
     {
@@ -124,8 +57,8 @@ function Tablex() {
       dataIndex: 'email',
     },
     {
-      title: 'Desination',
-      dataIndex: 'desination',
+      title: 'Designation',
+      dataIndex: 'designation',
     },
     {
       title: 'Action',
@@ -137,7 +70,20 @@ function Tablex() {
 
   return (
     <div>
-      <Table columns={columns} dataSource={data} />
+      <Table dataSource={teacher_list}>
+        <Column title="Full Name" dataIndex="name" key="name" />
+        <Column title="Email" dataIndex="email" key="email" />
+
+        <Column title="Designation" dataIndex="designation" key="designation" />
+
+        <Column
+          title="Action"
+          key="action"
+          render={(_, record) => (
+            <Button>View</Button>
+          )}
+        />
+      </Table>
     </div>
   )
 }

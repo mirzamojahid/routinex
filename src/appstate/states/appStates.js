@@ -23,9 +23,10 @@ export const courseState = {
 }
 
 
-export const facultyState = {
-    list: [],
-    selected: null,
+export const teacherState = {
+    teacher_list: [],
+    teacher_selected: null,
+    teacher_department:null
 }
 
 

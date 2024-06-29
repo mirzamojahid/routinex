@@ -22,7 +22,7 @@ function Section() {
         params.push(`semester__name=${encodeURIComponent(semester)}`);
       }
       if (department !== null) {
-        params.push(`department__name=${encodeURIComponent(department)}`);
+        params.push(`department=${encodeURIComponent(department)}`);
       }
       if (params.length > 0) {
         url += '?' + params.join('&')
@@ -90,7 +90,7 @@ function Section() {
 
         <List dataSource={section_list} renderItem={(item) => {
           return <List.Item onClick={() => {
-          }}>{item.batch} {item.name} ({item.department.name})</List.Item>
+          }}>{item.batch} {item.name} ({item.department})</List.Item>
         }}>
         </List>
       </Card>
