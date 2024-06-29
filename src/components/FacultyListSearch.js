@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Card, Input } from 'antd';
 import { List } from 'antd';
@@ -8,6 +8,19 @@ import { base_endpoint, headerx } from '../utils/constants';
 
 const { Search } = Input;
 
+export const OfferedCourseByFaculty = async (dispatch,employee_id) => {
+    headerx['Authorization'] = `Bearer ${CheckToken()}`;
+    const res = await fetch(base_endpoint + "/api/diu/offered-courses/?teacher__id=" + employee_id, {
+        method: "GET",
+        headers: headerx
+    })
+    const datax = await res.json();
+
+    if (res.status === 200) {
+        dispatch(generateFacultyOfferedAction(datax));
+    }
+
+}
 
 
 function FacultyListSearch({ width = 450 }) {
@@ -19,7 +32,6 @@ function FacultyListSearch({ width = 450 }) {
     const onSearch = (value, _e, info) => console.log(info?.source, value);
 
     const FetchInfo = async () => {
-
         try {
             headerx['Authorization'] = `Bearer ${CheckToken()}`;
             const res = await fetch(base_endpoint + "/api/diu/teachers/", {
@@ -38,22 +50,6 @@ function FacultyListSearch({ width = 450 }) {
         }
 
     }
-
-
-
-    const OfferedCourseByFaculty = async (employee_id) => {
-        headerx['Authorization'] = `Bearer ${CheckToken()}`;
-        const res = await fetch(base_endpoint + "/api/diu/offered-courses/?teacher__id=" + employee_id, {
-            method: "GET",
-            headers: headerx
-        })
-        const datax = await res.json();
-        if (res.status === 200) {
-            dispatch(generateFacultyOfferedAction(["Digital Image Processing", "Big Data & IoT", "Big Data & IoT Lab", "Software Engineering", "Algortithm", "Algorithm Lab"]));
-        }
-
-    }
-
 
     useEffect(() => {
         FetchInfo();
@@ -83,7 +79,7 @@ function FacultyListSearch({ width = 450 }) {
                     renderItem={(item) => (
                         <List.Item className={'cursor noselect'} onClick={() => {
                             dispatch(generateSelectFacultyAction(item));
-                            OfferedCourseByFaculty(item.employee_id);
+                            OfferedCourseByFaculty(dispatch,item.id);
                         }}>
                             <div className={item === activeTeacher ? 'flex an_center faculty_selected ' : 'flex an_center'}>
                                 <img alt='' className='round' src='https://api.dicebear.com/7.x/miniavs/svg?seed=1' width={34} height={34}></img>

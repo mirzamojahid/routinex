@@ -12,14 +12,18 @@ export const roomState = {
 }
 
 export const routineState = {
-    list: [],
+    rouitne_list: [],
+    rouitne_department: null,
+
 }
 
 
 export const courseState = {
-    list: [],
-    offered: [],
-    selected: null
+    course_list: [],
+    course_offered: [],
+    course_department:null,
+    course_semester:null,
+    course_selected: null
 }
 
 
@@ -44,7 +48,6 @@ export const adminStaffState = {
     selected: null,
     iam: null
 }
-
 
 export const routineGetState = {
 
@@ -529,6 +532,9 @@ export const generateState = {
     offered: [],
     next: false,
     edit: false,
-    add: false
-
+    add: false,
+    offer_selected_section:null,
+    offer_selected_course:null,
+    offer_routine_day:null,
+    offer_routine_room:null,
 }

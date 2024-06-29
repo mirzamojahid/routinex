@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Button, Card, List, Select } from 'antd'
+import React, { useEffect, useState } from 'react'
+import { Button, Card, List, Select, Modal, Input } from 'antd'
 import { base_endpoint, departmentx, headerx, semesterx } from '../../../utils/constants'
 import { CheckToken, clearToken } from '../../../utils/auth';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,8 +9,18 @@ import { sectionDepartmentAction, sectionSemesterAction, sectionlistAction } fro
 function Section() {
 
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const { section_list, section_department, section_semester } = useSelector((state) => state.section);
+
+
+  const [addSection, setAddsetion] = useState(false);
+
+  const [sectionName, setSectionName] = useState('');
+  const [batchSection, setBatchSection] = useState('');
+  const [semesterSection, setSemesterSection] = useState(null);
+  const [departmentSection, setDepartmentSection] = useState(null);
+
+
 
   const FetchInfo = async (semester = null, department = null) => {
 
@@ -43,6 +53,34 @@ function Section() {
       console.log(err);
     }
   }
+
+  const CreateSectionRequest = async (semester, department, section, batch) => {
+
+    try {
+      headerx['Authorization'] = `Bearer ${CheckToken()}`;
+      let url = base_endpoint + "/api/diu/sections/";
+      const res = await fetch(url, {
+        method: "POST",
+        headers: headerx,
+        body: JSON.stringify({ "name": section, "batch": batch, "semester": 1, "department": department })
+
+      })
+      if (res.status === 201) {
+        setAddsetion(false);
+        setSectionName("");
+        setBatchSection("");
+        FetchInfo();
+      } else if (res.status === 401) {
+        clearToken();
+        window.location.href = "/login";
+      } else {
+        alert("Something wrong");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
 
 
   useEffect(() => {
@@ -84,9 +122,79 @@ function Section() {
             }}
 
           />
-          <Button className='mar_l5'>Add + </Button>
+          <Button onClick={() => {
+            setAddsetion(true);
+          }} className='mar_l5'>Add + </Button>
         </div>
       </div>}>
+
+        <Modal width={340}
+          title="New Section Add"
+          open={addSection}
+          centered
+          footer={false}
+          children={<>
+
+            <Card>
+              <Input style={{
+                width: "100%",
+              }} placeholder='Section Name' onChange={(e) => {
+                setSectionName(e.target.value);
+              }}></Input>
+              <Input style={{
+                width: "100%",
+                marginTop: 5
+              }} placeholder='Section Batch' type='number' onChange={(e) => {
+                setBatchSection(e.target.value);
+              }}></Input>
+              <Select
+                style={{
+                  width: "100%",
+                  marginTop: 5
+                }}
+                value={semesterSection}
+                options={semesterx}
+                onChange={(value) => {
+                  setSemesterSection(value);
+                }}
+                placeholder="Select Semester"
+
+              />
+              <Select
+                style={{
+                  width: "100%",
+                  marginTop: 5
+                }}
+                value={departmentSection}
+                options={departmentx}
+                placeholder="Select Department"
+                onChange={(value) => {
+                  setDepartmentSection(value);
+                }}
+
+              />
+
+
+              <Button style={{
+                width: "100%",
+                marginTop: 5
+              }} onClick={() => {
+                if (semesterSection !== null && departmentSection !== null && sectionName !== "" && batchSection !== "") {
+                  CreateSectionRequest(semesterSection, departmentSection, sectionName, batchSection);
+                }
+
+              }}>Section Create</Button>
+
+            </Card>
+          </>}
+          onOk={() => {
+            setAddsetion(false);
+          }}
+          onCancel={() => {
+            setAddsetion(false);
+          }}>
+
+        </Modal>
 
         <List dataSource={section_list} renderItem={(item) => {
           return <List.Item onClick={() => {

@@ -52,7 +52,7 @@ function AssignedRoom() {
   const buildingChange = (value) => {
     dispatch(buildingRoomAction(value));
   };
-
+  
   const floorChange = (value) => {
     dispatch(floorRoomAction(value));
   };
@@ -102,7 +102,7 @@ function AssignedRoom() {
 
 
   useEffect(() => {
-    if (room == null || room.length == 0) {
+    if (room === null || room.length === 0) {
       FetcInfo();
     }
 

@@ -4,6 +4,8 @@ import {  drawerReducer, generateReducer } from './reducers/appReducers';
 import { roomReducer } from './reducers/roomReducers';
 import { sectionReducer } from './reducers/sectionReducers';
 import { teacherReducer } from './reducers/teacherReducers';
+import { routineReducer } from './reducers/routineReducers';
+import { courseReducer } from './reducers/courseReducers';
 
 
 const rootReducers = combineReducers({
@@ -11,7 +13,9 @@ const rootReducers = combineReducers({
     generate:generateReducer,
     room:roomReducer,
     section:sectionReducer,
-    teacher:teacherReducer
+    teacher:teacherReducer,
+    routine: routineReducer,
+    course:courseReducer
 })
 
 const store = createStore(rootReducers);
