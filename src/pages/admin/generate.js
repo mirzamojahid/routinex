@@ -38,11 +38,13 @@ function Genrate() {
     return (<div className='flex'>
         <FacultyListSearch></FacultyListSearch>
         <div className='mar_l5 mar_r5'></div>
+     
         {activeTeacher !== null && <>
             <OfferedCourse></OfferedCourse>
+            
             <FloatButton className='next_float' onClick={() => {
                 dispatch(generateNextEnableAction());
-            }} icon={<span>Next</span>}></FloatButton>
+            }} icon={<span>Get</span>}></FloatButton>
 
             <Modal
                 width={340}
@@ -50,7 +52,7 @@ function Genrate() {
                 open={next}
                 centered
                 closable={false}
-                children={<>Routine Builder can help you easy way to generate routine</>}
+                children={<>Download the Routine</>}
                 onOk={() => {
                     generateRoutineFile();
                     dispatch(generateNextDisableAction());

@@ -1,4 +1,4 @@
-import { BUILDING_ROOM, FLOOR_ROOM, ROOM_LIST, ROOM_SELECTED, SELECTED_DAY_ROOM, SELECTED_TYPE_ROOM } from "../constants/appConstants";
+import { BUILDING_ROOM, FLOOR_ROOM, ROOM_ADD_POPUP_DISABLE, ROOM_ADD_POPUP_ENABLE, ROOM_LIST, ROOM_SELECTED, SELECTED_DAY_ROOM, SELECTED_TYPE_ROOM } from "../constants/appConstants";
 import { roomState } from "../states/appStates";
 
 
@@ -30,12 +30,24 @@ export const roomReducer = (state = roomState, action) => {
                 ...state,
                 day_selected: action.playload
             }
-            case SELECTED_TYPE_ROOM:
-                return {
-                    ...state,
-                    room_type: action.playload
-                }
-    
+        case SELECTED_TYPE_ROOM:
+            return {
+                ...state,
+                room_type: action.playload
+            }
+
+        case ROOM_ADD_POPUP_ENABLE:
+            return {
+                ...state,
+                addPopup: true
+            }
+
+        case ROOM_ADD_POPUP_DISABLE:
+            return {
+                ...state,
+                addPopup: false
+            }
+
         default:
             return state;
     }

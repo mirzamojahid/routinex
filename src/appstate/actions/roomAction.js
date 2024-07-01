@@ -1,4 +1,4 @@
-import { BUILDING_ROOM, FLOOR_ROOM, ROOM_LIST, ROOM_SELECTED, SELECTED_DAY_ROOM, SELECTED_TYPE_ROOM } from "../constants/appConstants"
+import { BUILDING_ROOM, FLOOR_ROOM, ROOM_ADD_POPUP_DISABLE, ROOM_ADD_POPUP_ENABLE, ROOM_LIST, ROOM_SELECTED, SELECTED_DAY_ROOM, SELECTED_TYPE_ROOM } from "../constants/appConstants"
 
 
 export const roomlistAction = (value) => {
@@ -44,6 +44,20 @@ export const selectedTypeRoomAction = (value) => {
     return {
         type: SELECTED_TYPE_ROOM,
         playload: value
+    }
+}
+
+
+export const addPopupEnableRoomAction = (value) => {
+    return {
+        type: ROOM_ADD_POPUP_ENABLE,
+    }
+}
+
+
+export const addPopupDisableRoomAction = (value) => {
+    return {
+        type: ROOM_ADD_POPUP_DISABLE,
     }
 }
 

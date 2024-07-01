@@ -8,7 +8,8 @@ export const roomState = {
     floor_selected: null,
     building_selected: null,
     day_selected: 'Sat',
-    room_type:null,
+    addPopup:false,
+    room_type:"THEORY",
 }
 
 export const routineState = {

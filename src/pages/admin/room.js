@@ -5,15 +5,15 @@ import {
   List,
   Row,
   Col,
-  Drawer,
   Select,
 } from 'antd'
 import { CheckToken, clearToken } from '../../utils/auth'
 
 import { building, floor, days, base_endpoint, headerx, roomtype } from '../../utils/constants'
-import { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
-import { buildingRoomAction, daySelectedRoomAction, floorRoomAction, roomSelectedAction, roomlistAction, selectedTypeRoomAction } from '../../appstate/actions/roomAction';
+import { addPopupEnableRoomAction, buildingRoomAction, daySelectedRoomAction, floorRoomAction, roomSelectedAction, roomlistAction, selectedTypeRoomAction } from '../../appstate/actions/roomAction';
+import AddRoom from '../../components/AddRoom';
 
 
 const roomStyle = {
@@ -33,21 +33,51 @@ const slotStyle = {
   borderRadius: 5
 }
 
+export  const FetchRoomInfo = async ({dispatch,floorx = null, buildingx = null,room_type=null}) => {
+  try{
+   headerx['Authorization'] = `Bearer ${CheckToken()}`;
+   let url = base_endpoint + "/api/diu/rooms/";
+   let params = [];
+   if (floorx !== null) {
+     params.push(`floor=${encodeURIComponent(floorx)}`);
+   }
+   if (buildingx !== null) {
+     params.push(`building=${encodeURIComponent(buildingx)}`);
+   }
+   if (room_type !== null) {
+     params.push(`type=${encodeURIComponent(room_type)}`);
+   }
+   
+
+   if (params.length > 0) {
+     url += '?' + params.join('&')
+   }
+   const res = await fetch(url, {
+     method: "GET",
+     headers: headerx,
+
+   })
+   const datax = await res.json();
+   if (res.status === 200) {
+     dispatch(roomSelectedAction(null));
+     dispatch(roomlistAction(datax));
+   } else if (res.status === 401) {
+     clearToken();
+     window.location.href = "/login";
+   }
+  }catch(err){
+   console.log(err);
+  }
+
+ }
+
+
 function AssignedRoom() {
 
   const dispatch = useDispatch()
   const {room_type, selected, room, floor_selected, building_selected, day_selected } = useSelector((state) => state.room);
 
 
-  const [open, setOpen] = useState(false);
-
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
 
   const buildingChange = (value) => {
     dispatch(buildingRoomAction(value));
@@ -61,49 +91,9 @@ function AssignedRoom() {
     dispatch(daySelectedRoomAction(value));
   };
 
-
-  const FetcInfo = async (floorx = null, buildingx = null,room_type=null) => {
-   try{
-    headerx['Authorization'] = `Bearer ${CheckToken()}`;
-    let url = base_endpoint + "/api/diu/rooms/";
-    let params = [];
-    if (floorx !== null) {
-      params.push(`floor=${encodeURIComponent(floorx)}`);
-    }
-    if (buildingx !== null) {
-      params.push(`building=${encodeURIComponent(buildingx)}`);
-    }
-    if (room_type !== null) {
-      params.push(`type=${encodeURIComponent(room_type)}`);
-    }
-    
-
-    if (params.length > 0) {
-      url += '?' + params.join('&')
-    }
-    const res = await fetch(url, {
-      method: "GET",
-      headers: headerx,
-
-    })
-    const datax = await res.json();
-    if (res.status === 200) {
-      dispatch(roomSelectedAction(null));
-      dispatch(roomlistAction(datax));
-    } else if (res.status === 401) {
-      clearToken();
-      window.location.href = "/login";
-    }
-   }catch(err){
-    console.log(err);
-   }
-
-  }
-
-
   useEffect(() => {
     if (room === null || room.length === 0) {
-      FetcInfo();
+      FetchRoomInfo({dispatch:dispatch,room_type:"THEORY"});
     }
 
   }, []);
@@ -156,7 +146,7 @@ function AssignedRoom() {
             className='mar_l5'
             onClick={() => {
               if (floor_selected !== null || building_selected !== null || room_type) {
-                FetcInfo(floor_selected, building_selected,room_type);
+                FetchRoomInfo({dispatch,floorx:floor_selected, buildingx:building_selected,room_type:room_type});
               }
             }}
             children={<span className='fwhite'>Search</span>}
@@ -167,18 +157,14 @@ function AssignedRoom() {
             style={{ width: 150, backgroundColor: "rgb(95, 247, 95)" }}
             type="primary"
             className='mar_l5'
-            onClick={showDrawer}
+            onClick={()=>{
+              dispatch(addPopupEnableRoomAction())
+            }}
             children={<span className='fwhite'>Add Room + </span>}
           >
           </Button>
-          <Drawer
-            title="Add Room"
-            width={400}
-            onClose={onClose}
-            open={open}
-          >
-            <List></List>
-          </Drawer>
+          
+          <AddRoom></AddRoom>
         </div>
       </div>}>
         <div style={{ display: 'flex' }}>
@@ -193,13 +179,13 @@ function AssignedRoom() {
             <Row gutter={[16, 24]}>
               {room !== null && room.map((e) => {
                 return (<Col key={`room_${e.id}`} onClick={() => {
-                  if (selected == e) {
+                  if (selected === e) {
                     dispatch(roomSelectedAction(null));
                   } else {
                     dispatch(roomSelectedAction(e));
                   }
                 }} className="gutter-row" span={6}>
-                  <Card hoverable style={selected == e ? { ...roomStyle, background: "rgb(252, 57, 57)" } : roomStyle} className='fwhite'>{e.building}-{e.room_number} ({e.type})</Card>
+                  <Card hoverable style={selected === e ? { ...roomStyle, background: "#808080" } : roomStyle} className='fwhite'>{e.building}-{e.room_number}</Card>
                 </Col>);
               })}
 

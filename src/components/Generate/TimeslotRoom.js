@@ -5,16 +5,17 @@ import {
     List,
     Row,
     Col,
-    Drawer,
     Select,
 } from 'antd'
-import { useState } from 'react';
+
+
 import { useDispatch, useSelector } from 'react-redux';
-import { buildingRoomAction, daySelectedRoomAction, floorRoomAction, roomSelectedAction, roomlistAction, selectedTypeRoomAction } from '../../appstate/actions/roomAction';
+import { addPopupEnableRoomAction, buildingRoomAction, daySelectedRoomAction, floorRoomAction, roomSelectedAction, roomlistAction, selectedTypeRoomAction } from '../../appstate/actions/roomAction';
 import { base_endpoint, building, days, floor, headerx, roomtype } from '../../utils/constants';
 import { CheckToken, clearToken } from '../../utils/auth';
 
 import { generateOfferCourseUnselectedAction, generateOfferedEditDisableAction } from '../../appstate/actions/generateAction';
+import AddRoom from '../AddRoom';
 
 const roomStyle = {
     background: '#0092ff',
@@ -39,16 +40,6 @@ function TimeslotRoom() {
     const dispatch = useDispatch();
     const { room_type, selected, room, floor_selected, building_selected, day_selected } = useSelector((state) => state.room);
     const { offer_selected_course } = useSelector((state) => state.generate);
-    const [open, setOpen] = useState(false);
-    const showDrawer = () => {
-        setOpen(true);
-    };
-
-    const onClose = () => {
-        setOpen(false);
-    };
-
-
 
 
     const addRoutineOfferedCourseByFaculty = async (day, semester, course, room, timeslot) => {
@@ -94,7 +85,7 @@ function TimeslotRoom() {
     };
 
 
-    const FetchInfo = async (floorx = null, buildingx = null, room_type = null) => {
+    const FetchInfo = async ({ floorx = null, buildingx = null, room_type = null }) => {
         try {
             headerx['Authorization'] = `Bearer ${CheckToken()}`;
             let url = base_endpoint + "/api/diu/rooms/";
@@ -108,7 +99,6 @@ function TimeslotRoom() {
             if (room_type !== null) {
                 params.push(`type=${encodeURIComponent(room_type)}`);
             }
-
 
             if (params.length > 0) {
                 url += '?' + params.join('&')
@@ -131,7 +121,6 @@ function TimeslotRoom() {
         }
 
     }
-
 
 
     return (
@@ -181,7 +170,7 @@ function TimeslotRoom() {
                         className='mar_l5'
                         onClick={() => {
                             if (floor_selected !== null || building_selected !== null || room_type) {
-                                FetchInfo(floor_selected, building_selected, room_type);
+                                FetchInfo({ floorx: floor_selected, buildingx: building_selected, room_type: room_type });
                             }
                         }}
                         children={<span className='fwhite'>Search</span>}
@@ -192,18 +181,14 @@ function TimeslotRoom() {
                         style={{ width: 150, backgroundColor: "rgb(95, 247, 95)" }}
                         type="primary"
                         className='mar_l5'
-                        onClick={showDrawer}
+                        onClick={()=>{
+                            dispatch(addPopupEnableRoomAction())
+                        }}
                         children={<span className='fwhite'>Add Room + </span>}
                     >
                     </Button>
-                    <Drawer
-                        title="Add Room"
-                        width={400}
-                        onClose={onClose}
-                        open={open}
-                    >
-                        <List></List>
-                    </Drawer>
+
+                    <AddRoom></AddRoom>
                 </div>
             </div>}>
                 <div style={{ display: 'flex' }}>
@@ -224,7 +209,7 @@ function TimeslotRoom() {
                                         dispatch(roomSelectedAction(e));
                                     }
                                 }} className="gutter-row" span={6}>
-                                    <Card hoverable style={selected === e ? { ...roomStyle, background: "rgb(252, 57, 57)" } : roomStyle} className='fwhite'>{e.building}-{e.room_number} ({e.type})</Card>
+                                    <Card hoverable style={selected === e ? { ...roomStyle, background: "#808080" } : roomStyle} className='fwhite'>{e.building}-{e.room_number}</Card>
                                 </Col>);
                             })}
 

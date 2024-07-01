@@ -42,7 +42,6 @@ function OfferedCourse({ width = 350 }) {
     };
 
 
-
     const addOfferedCourseByFaculty = async (teacher, semester, section, course) => {
         try {
             headerx['Authorization'] = `Bearer ${CheckToken()}`;
@@ -52,12 +51,12 @@ function OfferedCourse({ width = 350 }) {
                 body: JSON.stringify({ "course": course, "section": section, "semester": semester, "teacher": teacher })
             })
             const datax = await res.json();
-
             if (res.status === 201) {
                 dispatch(generateFacultyOfferedAddAction(datax));
                 dispatch(generateOfferedAddDisableAction());
                 dispatch(generateOfferCourseUnselectedAction());
                 dispatch(generateOfferSectionUnselectedAction());
+                //
             } else if (res.status === 401) {
                 clearToken();
                 window.location.href = "/login";
@@ -145,7 +144,7 @@ function OfferedCourse({ width = 350 }) {
 
 
 
-    const FetchRoomSlot = async (floorx = null, buildingx = null, room_type = null) => {
+    const FetchRoomSlot = async ({floorx = null, buildingx = null, room_type = null}) => {
         try {
             headerx['Authorization'] = `Bearer ${CheckToken()}`;
             let url = base_endpoint + "/api/diu/rooms/";
@@ -243,8 +242,8 @@ function OfferedCourse({ width = 350 }) {
                             <div className='flex'>
 
                                 <Card title="Course List" style={{ width: "50%" }}>
-                                    <List pagination={true}   dataSource={course_list} renderItem={(item) => {
-                                        return <List.Item key={`course_${item.id}`}  onClick={() => {
+                                    <List pagination={true} dataSource={course_list} renderItem={(item) => {
+                                        return <List.Item key={`course_${item.id}`} onClick={() => {
                                             if (item === offer_selected_course) {
                                                 dispatch(generateOfferCourseUnselectedAction());
                                             } else {
@@ -290,7 +289,7 @@ function OfferedCourse({ width = 350 }) {
                                 <PlusOutlined onClick={async () => {
                                     const ret = await checkRoutineExists(item.id);
                                     if (ret === false) {
-                                        FetchRoomSlot();
+                                        FetchRoomSlot({room_type:"THEORY"});
                                         dispatch(generateOfferCourseSelectedAction(item));
                                         dispatch(generateOfferedEditEnableAction());
                                     } else {
