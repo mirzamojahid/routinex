@@ -17,6 +17,9 @@ const imgStyle = {
   borderRadius: 50
 }
 
+
+
+
 function AdminStaff() {
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -149,7 +152,7 @@ function AdminStaff() {
               }}
                 src={staffInfo.profile_pic} alt='' />
               <h3 style={{ marginTop: 10 }}>{staffInfo.first_name + staffInfo.last_name}</h3>
-              <p>{staffInfo.user.is_admin == true ? "Admin" : "Staff"}</p>
+              <p>{staffInfo.user.is_admin === true ? "Admin" : "Staff"}</p>
             </div>
             <div style={{ paddingLeft: 40 }}>
               <div style={{ display: "flex", margin: 15 }}>
@@ -169,13 +172,7 @@ function AdminStaff() {
                 <p>{new Date(staffInfo.created_at).toDateString()}</p>
               </div>
             </div>
-            <Button
-              type="primary"
-              className='mar_l5'
-              children={<span className='fwhite'>Update</span>}
-            >
-            </Button>
-            <span className='fwhite'>Update</span>
+
           </div>
         </div> : null}
 
