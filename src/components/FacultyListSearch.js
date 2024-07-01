@@ -8,7 +8,7 @@ import { base_endpoint, headerx } from '../utils/constants';
 
 const { Search } = Input;
 
-export const OfferedCourseByFaculty = async (dispatch,employee_id) => {
+export const OfferedCourseByFaculty = async (dispatch, employee_id) => {
     headerx['Authorization'] = `Bearer ${CheckToken()}`;
     const res = await fetch(base_endpoint + "/api/diu/offered-courses/?teacher__id=" + employee_id, {
         method: "GET",
@@ -29,12 +29,27 @@ function FacultyListSearch({ width = 450 }) {
 
     const { activeTeacher, faculty } = useSelector((state) => state.generate);
 
-    const onSearch = (value, _e, info) => console.log(info?.source, value);
+    const onSearch = (value, _e, info) => {
+        FetchInfo({initial:value});
+    };
 
-    const FetchInfo = async () => {
+    const FetchInfo = async ({ initial = null }) => {
         try {
+
+            let url = base_endpoint + "/api/diu/teachers/";
+
+
+            let params = [];
+            if (initial !== null) {
+                params.push(`initial=${encodeURIComponent(initial)}`);
+            }
+            if (params.length > 0) {
+                url += '?' + params.join('&')
+            }
+
+
             headerx['Authorization'] = `Bearer ${CheckToken()}`;
-            const res = await fetch(base_endpoint + "/api/diu/teachers/", {
+            const res = await fetch(url, {
                 method: "GET",
                 headers: headerx
             })
@@ -52,7 +67,7 @@ function FacultyListSearch({ width = 450 }) {
     }
 
     useEffect(() => {
-        FetchInfo();
+        FetchInfo({});
     }, []);
 
     return (
@@ -63,7 +78,8 @@ function FacultyListSearch({ width = 450 }) {
                 }}
                     height={60}
                     allowClear
-                    placeholder='Search by Full Name | Initial' onSearch={onSearch}></Search>
+
+                    placeholder='Search by Teacher Full Initial' onSearch={onSearch}></Search>
 
                 <List
                     itemLayout="vertical"
@@ -79,7 +95,7 @@ function FacultyListSearch({ width = 450 }) {
                     renderItem={(item) => (
                         <List.Item className={'cursor noselect'} onClick={() => {
                             dispatch(generateSelectFacultyAction(item));
-                            OfferedCourseByFaculty(dispatch,item.id);
+                            OfferedCourseByFaculty(dispatch, item.id);
                         }}>
                             <div className={item === activeTeacher ? 'flex an_center faculty_selected ' : 'flex an_center'}>
                                 <img alt='' className='round' src='https://api.dicebear.com/7.x/miniavs/svg?seed=1' width={34} height={34}></img>

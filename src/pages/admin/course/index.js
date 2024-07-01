@@ -3,18 +3,16 @@ import { Button, Card, Input, List, Modal, Select } from 'antd'
 import { base_endpoint, departmentx, headerx, roomtype, semesterx } from '../../../utils/constants'
 import { CheckToken, clearToken } from '../../../utils/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import { courseSemesterAction, courselistAction } from '../../../appstate/actions/courseAction';
+import { courseDepartmentAction, courseSemesterAction, courselistAction } from '../../../appstate/actions/courseAction';
+import { FetchSemesterInfo } from '../semester_page';
 
 
 function Course() {
 
-
-
   const dispatch = useDispatch()
   const { course_list,
-    course_offered,
-    course_department,
-    course_selected,course_semester } = useSelector((state) => state.course);
+    course_department, course_semester } = useSelector((state) => state.course);
+  const { semester_list } = useSelector((state) => state.semester);
 
 
   const [addPopup, setPopup] = useState(false);
@@ -25,9 +23,10 @@ function Course() {
   const [credit, setCredit] = useState(1);
   const [department, setDepartment] = useState(null);
   const [course_type, setCourse_type] = useState(null);
+  const [semesterCourse, setSemesterCourse] = useState(null);
 
-  const CreateCourseRequest = async (title, code, description, credit, department, course_type) => {
 
+  const CreateCourseRequest = async (title, code, description, credit, department, course_type, semester_id) => {
     try {
       headerx['Authorization'] = `Bearer ${CheckToken()}`;
       let url = base_endpoint + "/api/diu/courses/";
@@ -41,13 +40,15 @@ function Course() {
           "credit": credit,
           "department": department,
           "course_type": course_type,
-          "semester": 1
+          "semester": semester_id
         })
 
       })
 
       const datax = res.json();
+      console.log(datax);
       if (res.status === 201) {
+        FetchInfo({ semester: course_semester, department: course_department });
         setPopup(false);
       } else if (res.status === 401) {
         clearToken();
@@ -62,11 +63,22 @@ function Course() {
 
 
 
-
-  const FetchInfo = async () => {
+  const FetchInfo = async ({ semester, department }) => {
     try {
       headerx['Authorization'] = `Bearer ${CheckToken()}`;
       let url = base_endpoint + "/api/diu/courses/";
+
+
+      let params = [];
+      if (semester !== null) {
+        params.push(`semester__name=${encodeURIComponent(semester)}`);
+      }
+      if (department !== null) {
+        params.push(`department=${encodeURIComponent(department)}`);
+      }
+      if (params.length > 0) {
+        url += '?' + params.join('&')
+      }
 
       const res = await fetch(url, {
         method: "GET",
@@ -88,7 +100,7 @@ function Course() {
   useEffect(() => {
 
     if (course_list !== null && course_list.length === 0) {
-      FetchInfo();
+      FetchInfo({ semester: course_semester, department: course_department });
     }
   }, [])
 
@@ -154,6 +166,27 @@ function Course() {
                 width: "100%",
                 marginTop: 5
               }}
+              options={semester_list}
+              placeholder="Select Semester"
+              onChange={(value) => {
+                semester_list.filter((e) => {
+
+                  if (e.value === value) {
+                    console.log(e.id);
+                    setSemesterCourse(e.id);
+                    return 0;
+                  }
+                })
+              }}
+
+            />
+
+
+            <Select
+              style={{
+                width: "100%",
+                marginTop: 5
+              }}
               value={course_type}
               options={roomtype}
               placeholder="Course Type"
@@ -169,8 +202,8 @@ function Course() {
               marginTop: 5
             }} onClick={() => {
 
-              if (title !== "" && code !== "" && description !== "" && credit !== "" && department !== null && course_type !== null) {
-                CreateCourseRequest(title, code, description, credit, department, course_type);
+              if (title !== "" && code !== "" && description !== "" && credit !== "" && department !== null && course_type !== null && semesterCourse !== null) {
+                CreateCourseRequest(title, code, description, credit, department, course_type, semesterCourse);
               } else {
                 alert("Make sure all fields are filup");
               }
@@ -196,15 +229,31 @@ function Course() {
             style={{
               width: 200,
             }}
+            value={course_department}
+            options={departmentx}
+            placeholder="Course by Department"
+            onChange={(value) => {
+              dispatch(courseDepartmentAction(value));
+              FetchInfo({ semester: course_semester, department: value });
+            }}
+          />
+
+          <Select
+            style={{
+              width: 200,
+              marginLeft:5
+            }}
             value={course_semester}
             options={semesterx}
             placeholder="Course by Semester"
             onChange={(value) => {
               dispatch(courseSemesterAction(value));
+              FetchInfo({ semester: value, department: course_department });
             }}
 
           />
           <Button className='mar_l5' onClick={() => {
+            FetchSemesterInfo({ dispatch: dispatch });
             setPopup(true);
           }}>Add + </Button>
         </div>
