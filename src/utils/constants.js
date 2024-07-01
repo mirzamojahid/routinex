@@ -29,6 +29,10 @@ export const navItemAdmin = [
     "icon": <PicCenterOutlined style={{ marginRight: 5 }} />
   },
   {
+    "label": "Semester", "key": "/admin/semester",
+    "icon": <PicCenterOutlined style={{ marginRight: 5 }} />
+  },
+  {
     "label": "Course List", "key": "/admin/course",
     "icon": <FormOutlined style={{ marginRight: 5 }} />
   },

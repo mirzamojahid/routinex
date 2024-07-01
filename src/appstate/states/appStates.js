@@ -2,6 +2,12 @@ export const drawerState = {
     isOpen: false,
 }
 
+
+export const semesterState = {
+    semester_list: [],
+    addPopup:false,
+}
+
 export const roomState = {
     room: [],
     selected: null,

@@ -23,6 +23,7 @@ import AssignedRoom from './pages/admin/room'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminLayout from './components/AdminLayout';
+import SemesterPage from './pages/admin/semester_page';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
 
           <Route path="/admin/routine" element={<RequireToken><AdminLayout><Home></Home></AdminLayout></RequireToken>} />
 
+          <Route path="/admin/semester" element={<RequireToken><AdminLayout><SemesterPage></SemesterPage></AdminLayout></RequireToken>} />
+
+          
           <Route path="/admin/generate" element={<RequireToken><AdminLayout><Generate></Generate></AdminLayout></RequireToken>} />
           
           <Route path="/admin/room" element={<RequireToken><AdminLayout><AssignedRoom></AssignedRoom></AdminLayout></RequireToken>} />

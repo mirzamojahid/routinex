@@ -48,14 +48,14 @@ export const selectedTypeRoomAction = (value) => {
 }
 
 
-export const addPopupEnableRoomAction = (value) => {
+export const addPopupEnableRoomAction = () => {
     return {
         type: ROOM_ADD_POPUP_ENABLE,
     }
 }
 
 
-export const addPopupDisableRoomAction = (value) => {
+export const addPopupDisableRoomAction = () => {
     return {
         type: ROOM_ADD_POPUP_DISABLE,
     }

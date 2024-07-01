@@ -6,6 +6,7 @@ import { sectionReducer } from './reducers/sectionReducers';
 import { teacherReducer } from './reducers/teacherReducers';
 import { routineReducer } from './reducers/routineReducers';
 import { courseReducer } from './reducers/courseReducers';
+import { semesterReducer } from './reducers/semesterReducers';
 
 
 const rootReducers = combineReducers({
@@ -15,7 +16,8 @@ const rootReducers = combineReducers({
     section:sectionReducer,
     teacher:teacherReducer,
     routine: routineReducer,
-    course:courseReducer
+    course:courseReducer,
+    semester:semesterReducer
 })
 
 const store = createStore(rootReducers);
