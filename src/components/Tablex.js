@@ -236,14 +236,15 @@ function Tablex() {
         <Column title="Full Name" dataIndex="name" key="name" />
         <Column title="Email" dataIndex="email" key="email" />
         <Column title="Designation" dataIndex="designation" key="designation" />
-
+        <Column title="Employee ID" dataIndex="employee_id" key="employee_id" />
+{/* 
         <Column
           title="Action"
           key="action"
           render={(_, record) => (
             <Button>View</Button>
           )}
-        />
+        /> */}
       </Table>
     </div>
   )
