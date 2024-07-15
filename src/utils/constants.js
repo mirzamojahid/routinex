@@ -10,8 +10,8 @@ import {
 } from '@ant-design/icons'
 
 
-export const base_endpoint = "http://127.0.0.1:8000";
-//export const base_endpoint = "https://api.routinex.shohayok.com";
+//export const base_endpoint = "http://127.0.0.1:8000";
+export const base_endpoint = "https://defence.shohayok.com";
 
 
 export let headerx = {
