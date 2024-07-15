@@ -29,6 +29,7 @@ function AdminStaff() {
   const [staffInfo, setStaffInfo] = useState(null);
   const [listStaffInfo, setListStaffInfo] = useState([]);
 
+
   const onClose = () => {
     setOpen(false);
   };
@@ -71,42 +72,7 @@ function AdminStaff() {
     <div>
       <Card hoverable title={<div className='flex jy_sb'>
         <span>Admin/Staff</span>
-        <div className='flex'>
-          <Input
-            style={{
-              width: 250,
-              marginRight: 30
-            }}
-            placeholder="search by name"
-            onChange={searchName}
-          />
-          <Select
-            style={{
-              width: 150,
-              marginRight: 30
-            }}
-            placeholder="Select role"
-            optionFilterProp="children"
-            onChange={roleChange}
-            options={roles}
-          />
-          {/* <Button
-            style={{ width: 150 }}
-            type="primary"
-            className='mar_l5'
-            onClick={showDrawer}
-            children={<span className='fwhite'>Add Admin/Staff + </span>}
-          >
-          </Button>
-          <Drawer
-            title="Add Room"
-            width={400}
-            onClose={onClose}
-            open={open}
-          >
-            <List></List>
-          </Drawer> */}
-        </div>
+       
       </div>}>
 
         {staffInfo != null ? <div style={{ display: 'flex' }}>
@@ -120,12 +86,14 @@ function AdminStaff() {
           >
 
             {listStaffInfo.map((e) => {
-              return <div className="slot">
+              return <div onClick={()=>{
+                setStaffInfo(e);
+              }} className="slot">
                 <div>
                   <img style={imgStyle} src={e.profile_pic} alt='' />
                 </div>
                 <div className="slot-content">
-                  <h3 style={{ width: 180 }}>{e.first_name + e.last_name}</h3>
+                  <h3 style={{ width: 180 }}>{e.first_name+" " + e.last_name}</h3>
                   <p>{e.user.is_admin == true ? "Admin" : "Staff"}</p>
                 </div>
               </div>;
@@ -151,7 +119,7 @@ function AdminStaff() {
                 border: "1px solid rgb(78, 255, 158)"
               }}
                 src={staffInfo.profile_pic} alt='' />
-              <h3 style={{ marginTop: 10 }}>{staffInfo.first_name + staffInfo.last_name}</h3>
+              <h3 style={{ marginTop: 10 }}>{staffInfo.first_name +" "+ staffInfo.last_name}</h3>
               <p>{staffInfo.user.is_admin === true ? "Admin" : "Staff"}</p>
             </div>
             <div style={{ paddingLeft: 40 }}>
